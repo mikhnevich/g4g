@@ -6,7 +6,7 @@ package tree;
 public class TreeEquals {
 
     public static boolean equals(Node root1, Node root2) {
-
+        if (root 1)
     }
 
 }

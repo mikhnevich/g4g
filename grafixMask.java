@@ -93,6 +93,7 @@ public class grafixMask {
             this(Integer.parseInt(coordinates[0]), Integer.parseInt(coordinates[1]), Integer.parseInt(coordinates[2]), Integer.parseInt(coordinates[3]));
         }
 
+
         private Rectangle(int topLeftY, int topLeftX, int bottomRightY, int bottomRightX) {
             this.topLeftX = topLeftX;
             this.topLeftY = topLeftY;

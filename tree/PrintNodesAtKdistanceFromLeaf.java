@@ -1,7 +1,7 @@
 package tree;
 
-import scala.actors.threadpool.Arrays;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -18,7 +18,7 @@ public class PrintNodesAtKdistanceFromLeaf {
 
     public static Set<Integer> printNodesInternal(Node root, int k) {
         if (root == null) {
-            return new HashSet<Integer>(Arrays.asList(new Integer[] {-1}));
+            return new HashSet<Integer>(Arrays.asList(new Integer[]{-1}));
         }
         Set<Integer> ll = printNodesInternal(root.left, k);
         Set<Integer> lr = printNodesInternal(root.right, k);

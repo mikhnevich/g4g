@@ -5,7 +5,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by sm84878 @ 3/18/14 5:19 PM
+ * http://www.geeksforgeeks.org/print-nodes-distance-k-leaf-node/
+ * The idea is to traverse the tree. Keep storing all ancestors till we hit a leaf node. When we reach a leaf node, we print the ancestor at distance k. We also need to keep track of nodes that are already printed as output. For that we use a boolean array visited[].
  */
 public class PrintNodesAtKdistanceFromLeaf {
 

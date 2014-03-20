@@ -1,9 +1,7 @@
 package tree;
 
 
-import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 
 /**
@@ -12,40 +10,35 @@ import java.util.Set;
 public class PrintNodesAtKdistanceFromLeaf {
 
     public static void printNodes(Node root, int k) {
-        printNodesInternal(root, k);
+        int height = getHeight(root);
+        Node[] path = new Node[height];
+        Set<Node> printed = new HashSet<>();
+        printNodesInternal(path, printed, 0, root, k);
+    }
+
+    private static int getHeight(Node root) {
+        return 100;
     }
 
 
-    public static Set<Integer> printNodesInternal(Node root, int k) {
+    public static void printNodesInternal(Node path[], Set<Node> printed, int level, Node root, int k) {
         if (root == null) {
-            return new HashSet<Integer>(Arrays.asList(new Integer[]{-1}));
-        }
-        Set<Integer> ll = printNodesInternal(root.left, k);
-        Set<Integer> lr = printNodesInternal(root.right, k);
-
-
-        Set<Integer> current = new HashSet<>();
-        for (Integer i : ll) {
-            current.add(i + 1);
-        }
-        for (Integer i : lr) {
-            current.add(i + 1);
-        }
-        Iterator<Integer> it = current.iterator();
-        while (it.hasNext()) {
-            Integer i = it.next();
-            if (i == k) {
-                System.out.println(root.value);
-                it.remove();
+            if (level >= k) {
+                final int idx = level - k - 1;
+                Node n = path[idx];
+                if (!printed.contains(n)) {
+                    System.out.println(n.value);
+                    printed.add(n);
+                }
             }
+            return;
         }
-        return current;
-    }
+        path[level] = root;
 
-    public static void printNodes2(Node root, int k) {
-        printNodesInternal(root, k);
+        printNodesInternal(path, printed, level + 1, root.left, k);
+        printNodesInternal(path, printed, level + 1, root.right, k);
+        printed.remove(root);
     }
-
 
     public static void main(String[] args) {
         Node r3 = new Node(1,
@@ -56,7 +49,9 @@ public class PrintNodesAtKdistanceFromLeaf {
                         new Node(6,
                                 null,
                                 new Node(8)),
-                        new Node(7)));
+                        new Node(7)
+                )
+        );
         printNodes(r3, 2);
 
     }

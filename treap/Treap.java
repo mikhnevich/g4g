@@ -9,6 +9,8 @@ public class Treap {
     public final int priority;
     public final Treap left;
     public final Treap right;
+    public int size = 1;
+
 
     public Treap(int value, int priority) {
         this(value, priority, null, null);
@@ -19,6 +21,7 @@ public class Treap {
         this.priority = priority;
         this.left = left;
         this.right = right;
+        this.size = sizeOf(left) + sizeOf(right) + 1;
     }
 
     public static Treap merge(Treap L, Treap R) {
@@ -44,7 +47,7 @@ public class Treap {
     }
 
     public Treap delete(int x) {
-        Treap[] less = split(x-1);
+        Treap[] less = split(x - 1);
         Treap[] greater = less[1].split(x);
         return merge(less[0], greater[1]);
     }
@@ -67,5 +70,45 @@ public class Treap {
             result[1] = new Treap(value, priority, t[1], right);
         }
         return result;
+    }
+
+    private int sizeOf(Treap treap) {
+        return treap != null ? treap.size : 0;
+    }
+
+    public Integer kStatistics(int k) {
+        int sL = sizeOf(left);
+        if (sL == k) {
+            return value;
+        } else if (sL > k) {
+            return left.kStatistics(k);
+        } else {
+            return right.kStatistics(k - sL - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        Treap treap = new Treap(10, 8,
+                new Treap(8, 7,
+                        new Treap(4, 5,
+                                new Treap(1, 3),
+                                new Treap(6, 2)
+                        ),
+                        null
+                ),
+                new Treap(14, 6,
+                        new Treap(11, 4,
+                                null,
+                                new Treap(13, 1)
+                        ),
+                        new Treap(16, 0)
+                )
+        );
+        TreapUtils.printTreap(treap);
+        Treap[] t = treap.split(8);
+        System.out.println(t[0].size);
+        System.out.println(t[1].size);
+        Treap t2 = merge(t[0], t[1]);
+        System.out.println(t2.size);
     }
 }

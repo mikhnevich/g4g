@@ -1,15 +1,25 @@
 package tree;
 
 
+import com.google.common.primitives.Ints;
+
+import java.util.*;
+
 public class Traversal {
 
-    public static void preorder(Node root) {
+    public static int[] preorder(Node root) {
+        List<Integer> traversal = new ArrayList<>();
+        preorder(root, traversal);
+        return Ints.toArray(traversal);
+    }
+
+    private static void preorder(Node root, List<Integer> traversal) {
         if (root == null) {
             return;
         }
-        print(root.value);
-        preorder(root.left);
-        preorder(root.right);
+        traversal.add(root.value);
+        preorder(root.left, traversal);
+        preorder(root.right, traversal);
     }
 
     private static void print(int value) {
@@ -17,23 +27,55 @@ public class Traversal {
         System.out.print(" ");
     }
 
-    public static void inorder(Node root) {
-        if (root == null) {
-            return;
-        }
-        inorder(root.left);
-        print(root.value);
-        inorder(root.right);
+    public static int[] inorder(Node root) {
+        List<Integer> traversal = new ArrayList<>();
+        inorder(root, traversal);
+        return Ints.toArray(traversal);
     }
 
-    public static void postorder(Node root) {
+    private static void inorder(Node root, List<Integer> traversal) {
         if (root == null) {
             return;
         }
-        postorder(root.left);
-        postorder(root.right);
-        print(root.value);
+        inorder(root.left, traversal);
+        traversal.add(root.value);
+        inorder(root.right, traversal);
     }
+
+    public static int[] postorder(Node root) {
+        List<Integer> traversal = new ArrayList<>();
+        postorder(root, traversal);
+        return Ints.toArray(traversal);
+    }
+
+    private static void postorder(Node root, List<Integer> traversal) {
+        if (root == null) {
+            return;
+        }
+        postorder(root.left, traversal);
+        postorder(root.right, traversal);
+        traversal.add(root.value);
+    }
+
+    public static int[] levelorder(Node root) {
+        List<Integer> traversal = new ArrayList<>();
+        if (root != null) {
+            Queue<Node> q = new LinkedList<>();
+            q.add(root);
+            while (!q.isEmpty()) {
+                Node n = q.remove();
+                traversal.add(n.value);
+                if (n.left != null) {
+                    q.add(n.left);
+                }
+                if (n.right != null) {
+                    q.add(n.right);
+                }
+            }
+        }
+        return Ints.toArray(traversal);
+    }
+
 
     public static void main(String[] args) {
         Node r3 = new Node(1,
@@ -47,12 +89,17 @@ public class Traversal {
                         new Node(7)
                 )
         );
-        preorder(r3);
-        System.out.println();
-        inorder(r3);
-        System.out.println();
-        postorder(r3);
-        System.out.println();
+        int[] traversal;
+        traversal = preorder(r3);
+        System.out.println(Arrays.toString(traversal));
 
+        traversal = inorder(r3);
+        System.out.println(Arrays.toString(traversal));
+
+        traversal = postorder(r3);
+        System.out.println(Arrays.toString(traversal));
+
+        traversal = levelorder(r3);
+        System.out.println(Arrays.toString(traversal));
     }
 }

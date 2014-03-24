@@ -25,6 +25,7 @@ public class BST_Utils {
         return true;
     }
 
+
     public static void printNode(Node root) {
         int maxLevel = maxLevel(root);
 

@@ -27,6 +27,19 @@ public class LCA {
         return root.value;
     }
 
+    public static Integer lcaBST(Node root, int n1, int n2) {
+        if (root == null) {
+            return null;
+        }
+        if (n1 < root.value && n2 < root.value) {
+            return lcaBST(root.left, n1, n2);
+        }
+        if (n1 > root.value && n2 > root.value) {
+            return lcaBST(root.left, n1, n2);
+        }
+        return root.value;
+    }
+
     public static void main(String[] args) {
         Node root = new Node(8,
                 new Node(4,
@@ -41,7 +54,8 @@ public class LCA {
                         new Node(9),
                         new Node(11,
                                 new Node(12),
-                                null))
+                                null)
+                )
         );
         //                    8
         //                  /   \

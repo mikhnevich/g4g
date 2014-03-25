@@ -77,36 +77,43 @@ public class Traversal {
     }
 
 
-    private static void addNonNull(Stack<Node> queue, Node node) {
+    private static void appendNonNull(List<Node> queue, Node node) {
         if (node != null) {
-            queue.push(node);
+            queue.add(node);
+        }
+    }
+
+    private static void prependNonNull(List<Node> queue, Node node) {
+        if (node != null) {
+            queue.add(0, node);
         }
     }
 
     public static int[] levelorderSpiral(Node root) {
         List<Integer> traversal = new ArrayList<>();
-        List<Node> q = new LinkedList<>();
-        boolean forward = true;
         if (root != null) {
-            q.add(root);
-            q.add(null);
+            List<Node> forward = new LinkedList<>();
+            List<Node> backward = new LinkedList<>();
+            traversal.add(root.value);
+            forward.add(root.left);
+            forward.add(root.right);
+            while (!forward.isEmpty() || !backward.isEmpty()) {
+                for (Node n : forward) {
+                    traversal.add(n.value);
+                    prependNonNull(backward, n.left);
+                    prependNonNull(backward, n.right);
+                }
+                forward.clear();
 
-            while (!q.isEmpty()) {
-                Node n = q.pop();
-                if (n == null) {
-                    forward = !forward;
-                    continue;
+                for (Node n : backward) {
+                    traversal.add(n.value);
+                    prependNonNull(forward, n.right);
+                    prependNonNull(forward, n.left);
                 }
-                traversal.add(n.value);
-                if (forward) {
-                    addNonNull(q, n.left);
-                    addNonNull(q, n.right);
-                } else {
-                    addNonNull(q, n.right);
-                    addNonNull(q, n.left);
-                }
+                backward.clear();
             }
         }
+
         return Ints.toArray(traversal);
     }
 
@@ -115,19 +122,40 @@ public class Traversal {
         Node r3 = new Node(1,
                 new Node(2,
                         new Node(4,
-                                new Node(8),
-                                new Node(9)),
+                                new Node(8,
+                                        new Node(16),
+                                        new Node(17)),
+                                new Node(9,
+                                        new Node(18),
+                                        new Node(19))
+                        ),
                         new Node(5,
-                            new Node(10),
-                            new Node(11))
+                                new Node(10,
+                                        new Node(20),
+                                        new Node(21)),
+                                new Node(11,
+                                        new Node(22),
+                                        new Node(23))
+                        )
                 ),
                 new Node(3,
                         new Node(6,
-                                new Node(12),
-                                null),
-                        new Node(7)
-                )
-        );
+                                new Node(12,
+                                        new Node(24),
+                                        new Node(25)),
+                                new Node(13,
+                                        new Node(26),
+                                        new Node(27))
+                        ),
+                        new Node(7,
+                                new Node(14,
+                                        new Node(28),
+                                        new Node(29)),
+                                new Node(15,
+                                        new Node(30),
+                                        new Node(31))
+                        )
+                ));
         int[] traversal;
 /*
         traversal = preorder(r3);

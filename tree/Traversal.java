@@ -119,7 +119,7 @@ public class Traversal {
 
 
     public static void main(String[] args) {
-        Node r3 = new Node(1,
+        Node r = new Node(1,
                 new Node(2,
                         new Node(4,
                                 new Node(8,
@@ -156,24 +156,43 @@ public class Traversal {
                                         new Node(31))
                         )
                 ));
+        Node r3 = new Node(1,
+                new Node(2,
+                        new Node(4,
+                                new Node(8),
+                                new Node(9)
+                        ),
+                        new Node(5,
+                                new Node(10),
+                                new Node(11)
+                        )
+                ),
+                new Node(3,
+                        new Node(6,
+                                new Node(12),
+                                new Node(13)
+                        ),
+                        new Node(7,
+                                new Node(14),
+                                new Node(15)
+                        )
+                ));
         int[] traversal;
-/*
         traversal = preorder(r3);
-        System.out.println(Arrays.toString(traversal));
+        System.out.println("preorder: " + Arrays.toString(traversal));
 
         traversal = inorder(r3);
-        System.out.println(Arrays.toString(traversal));
+        System.out.println("inorder: " + Arrays.toString(traversal));
 
         traversal = postorder(r3);
-        System.out.println(Arrays.toString(traversal));
+        System.out.println("postorder: " + Arrays.toString(traversal));
 
         traversal = levelorder(r3);
-        System.out.println(Arrays.toString(traversal));
-*/
+        System.out.println("levelorder: " + Arrays.toString(traversal));
 
         BST_Utils.printNode(r3);
 
         traversal = levelorderSpiral(r3);
-        System.out.println(Arrays.toString(traversal));
+        System.out.println("levelorderSpiral: " + Arrays.toString(traversal));
     }
 }

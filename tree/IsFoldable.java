@@ -70,6 +70,24 @@ public class IsFoldable {
         return left.isEmpty() && right.isEmpty();
     }
 
+    public static boolean isFoldableRecursive(Node left, Node right) {
+        if (left == null && right == null) {
+            return true;
+        }
+        if (left == null || right == null) {
+            return false;
+        }
+        return isFoldableRecursive(left.left, right.right) &&
+        isFoldableRecursive(left.right, right.left);
+    }
+
+    public static boolean isFoldableRecursive(Node root) {
+        if (root == null) {
+            return true;
+        }
+        return isFoldableRecursive(root.left, root.right);
+    }
+
     public static void main(String[] args) {
         Node root = new Node(1,
                 new Node(2,
@@ -78,7 +96,7 @@ public class IsFoldable {
                 new Node(3,
                         new Node(5),
                         null));
-        System.out.println(isFoldable(root));
+        System.out.println(isFoldable(root) + " " + isFoldableRecursive(root));
 
         Node root2 = new Node(1,
                 new Node(2,
@@ -87,7 +105,7 @@ public class IsFoldable {
                 new Node(3,
                         null,
                         new Node(5)));
-        System.out.println(isFoldable(root2));
+        System.out.println(isFoldable(root2) + " " + isFoldableRecursive(root2));
 
         Node root3 = new Node(1,
                 new Node(2,
@@ -96,7 +114,7 @@ public class IsFoldable {
                 new Node(3,
                         new Node(5),
                         null));
-        System.out.println(isFoldable(root3));
+        System.out.println(isFoldable(root3) + " " + isFoldableRecursive(root3));
 
         Node root4 = new Node(1,
                 new Node(2,
@@ -105,7 +123,7 @@ public class IsFoldable {
                 new Node(3,
                         new Node(6),
                         null));
-        System.out.println(isFoldable(root4));
+        System.out.println(isFoldable(root4) + " " + isFoldableRecursive(root4));
 
     }
 }

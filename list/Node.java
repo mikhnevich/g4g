@@ -4,11 +4,11 @@ package list;
  * Created by user2 on 2/16/14.
  */
 public class Node {
-    private int data;
+    public int value;
     Node next;
 
-    public Node(int data, Node next) {
-        this.data = data;
+    public Node(int value, Node next) {
+        this.value = value;
         this.next = next;
     }
 
@@ -16,10 +16,10 @@ public class Node {
         if (n == null) {
             return null;
         }
-        Node prev = new Node(n.data, null);
+        Node prev = new Node(n.value, null);
         Node next = n.next;
         while (next != null) {
-            Node newNode = new Node(next.data, prev);
+            Node newNode = new Node(next.value, prev);
             prev = newNode;
             next = next.next;
         }
@@ -48,14 +48,14 @@ public class Node {
         }
 
         if (length == 2) {
-           return new Result(node.next.next, node.data == node.next.data);
+           return new Result(node.next.next, node.value == node.next.value);
         }
 
         Result r = isPalindrome(node.next, length - 2);
         if (!r.eq || r.node == null) {
             return r;
         } else {
-            return new Result(r.node.next, node.data == r.node.data);
+            return new Result(r.node.next, node.value == r.node.value);
         }
 
     }
@@ -72,7 +72,7 @@ public class Node {
 
     public static void print(Node n) {
         while (n != null) {
-            System.out.print(n.data + " -> ");
+            System.out.print(n.value + " -> ");
             n = n.next;
         }
         System.out.print("[]\n");
@@ -84,5 +84,12 @@ public class Node {
         System.out.println(isPalindrome(n));
         n = new Node(1, new Node(2, new Node(3, new Node(2, new Node(1, null)))));
         System.out.println(isPalindrome(n));
+    }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "value=" + value +
+                '}';
     }
 }

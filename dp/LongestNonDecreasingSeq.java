@@ -5,7 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by user2 on 2/25/14.
+ * http://www.topcoder.com/tc?d1=tutorials&d2=dynProg&module=Static
+ *
+ * Given a sequence of N numbers - A[1] , A[2] , ..., A[N] . Find the length of the longest non-decreasing sequence.
  */
 public class LongestNonDecreasingSeq {
     int[] calculate(int[] seq) {

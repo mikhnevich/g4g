@@ -13,8 +13,7 @@ public class Coins {
         min[0] = 0;
 
         for (int i = 1; i <= sum; i++) {
-            for (int j = 0; j < V.length; j++) {
-                int currentCoin = V[j];
+            for (int currentCoin : V) {
                 int partialSum = i - currentCoin;
                 if (partialSum >= 0) {
                     int partialMin = min[partialSum];

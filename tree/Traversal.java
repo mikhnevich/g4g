@@ -22,6 +22,22 @@ public class Traversal {
         preorder(root.right, traversal);
     }
 
+    public static int[] preorderIterative(Node root) {
+        List<Integer> traversal = new ArrayList<>();
+        Stack<Node> q = new Stack<>();
+        q.add(root);
+        while (!q.isEmpty()) {
+            Node n = q.pop();
+            if (n != null) {
+                traversal.add(n.value);
+                q.push(n.right);
+                q.push(n.left);
+            }
+        }
+        return Ints.toArray(traversal);
+    }
+
+
     private static void print(int value) {
         System.out.print(value);
         System.out.print(" ");
@@ -42,11 +58,90 @@ public class Traversal {
         inorder(root.right, traversal);
     }
 
+    public static int[] inorderIterative(Node root) {
+        List<Integer> traversal = new ArrayList<>();
+        Stack<Node> t = new Stack<>();
+        Stack<Node> q = new Stack<>();
+        q.add(root);
+        while (!q.isEmpty()) {
+            Node n = q.pop();
+            if (n != null) {
+                t.push(n);
+                q.push(n.right);
+                q.push(n.left);
+            } else {
+                if (!t.isEmpty()) {
+                    traversal.add(t.pop().value);
+                }
+            }
+        }
+        while (!t.isEmpty()) {
+            traversal.add(t.pop().value);
+        }
+        return Ints.toArray(traversal);
+    }
+
+    public static int[] inorderIterativeLeetCode(Node root) {
+        List<Integer> traversal = new ArrayList<>();
+        Stack<Node> q = new Stack<>();
+        Node current = root;
+        while (!q.isEmpty() || current != null) {
+            if (current != null) {
+                q.push(current);
+                current = current.left;
+            } else {
+                Node n = q.pop();
+                traversal.add(n.value);
+                current = n.right;
+            }
+        }
+        return Ints.toArray(traversal);
+    }
+
     public static int[] postorder(Node root) {
         List<Integer> traversal = new ArrayList<>();
         postorder(root, traversal);
         return Ints.toArray(traversal);
     }
+
+    /*
+    http://leetcode.com/2010/10/binary-tree-post-order-traversal.html
+     */
+    public static int[] postorderIterative(Node root) {
+        List<Integer> traversal = new ArrayList<>();
+        Stack<Node> q = new Stack<>();
+        if (root != null) {
+            Node previous = null;
+            q.add(root);
+            while (!q.isEmpty()) {
+                Node current = q.peek();
+                if (previous == null || previous.right == current || previous.left == current) {
+                    if (current.left != null) {
+                        q.push(current.left);
+                    } else if (current.right != null) {
+                        q.push(current.right);
+                    } else {
+                        traversal.add(current.value);
+                        q.pop();
+                    }
+                } else if (previous == current.left) {
+                    if (current.right == null) {
+                        traversal.add(current.value);
+                        q.pop();
+                    } else {
+                        q.push(current.right);
+                    }
+                } else if (previous == current.right) {
+                    traversal.add(current.value);
+                    q.pop();
+                }
+                previous = current;
+
+            }
+        }
+        return Ints.toArray(traversal);
+    }
+
 
     private static void postorder(Node root, List<Integer> traversal) {
         if (root == null) {
@@ -120,47 +215,16 @@ public class Traversal {
 
     public static void main(String[] args) {
         Node r = new Node(1,
-                new Node(2,
-                        new Node(4,
-                                new Node(8,
-                                        new Node(16),
-                                        new Node(17)),
-                                new Node(9,
-                                        new Node(18),
-                                        new Node(19))
-                        ),
-                        new Node(5,
-                                new Node(10,
-                                        new Node(20),
-                                        new Node(21)),
-                                new Node(11,
-                                        new Node(22),
-                                        new Node(23))
-                        )
-                ),
-                new Node(3,
-                        new Node(6,
-                                new Node(12,
-                                        new Node(24),
-                                        new Node(25)),
-                                new Node(13,
-                                        new Node(26),
-                                        new Node(27))
-                        ),
-                        new Node(7,
-                                new Node(14,
-                                        new Node(28),
-                                        new Node(29)),
-                                new Node(15,
-                                        new Node(30),
-                                        new Node(31))
-                        )
-                ));
+                new Node(2),
+                new Node(3)
+        );
         Node r3 = new Node(1,
                 new Node(2,
                         new Node(4,
                                 new Node(8),
-                                new Node(9)
+                                new Node(9,
+                                        null,
+                                        new Node(0))
                         ),
                         new Node(5,
                                 new Node(10),
@@ -176,21 +240,34 @@ public class Traversal {
                                 new Node(14),
                                 new Node(15)
                         )
-                ));
+                )
+        );
+        BST_Utils.printNode(r3);
+
         int[] traversal;
         traversal = preorder(r3);
         System.out.println("preorder: " + Arrays.toString(traversal));
 
+        traversal = preorderIterative(r3);
+        System.out.println("preorder iterative: " + Arrays.toString(traversal));
+
         traversal = inorder(r3);
         System.out.println("inorder: " + Arrays.toString(traversal));
+
+        traversal = inorderIterative(r3);
+        System.out.println("inorder iterative: " + Arrays.toString(traversal));
+
+        traversal = inorderIterativeLeetCode(r3);
+        System.out.println("inorder iterative leet: " + Arrays.toString(traversal));
 
         traversal = postorder(r3);
         System.out.println("postorder: " + Arrays.toString(traversal));
 
+        traversal = postorderIterative(r3);
+        System.out.println("postorder iterative: " + Arrays.toString(traversal));
+
         traversal = levelorder(r3);
         System.out.println("levelorder: " + Arrays.toString(traversal));
-
-        BST_Utils.printNode(r3);
 
         traversal = levelorderSpiral(r3);
         System.out.println("levelorderSpiral: " + Arrays.toString(traversal));

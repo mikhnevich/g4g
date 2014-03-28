@@ -1,6 +1,9 @@
 package treap;
 
+/*
+http://habrahabr.ru/post/101818/
 
+ */
 import java.util.Random;
 
 public class Treap {

@@ -1,7 +1,7 @@
 package sort;
 
 /**
- * Created by sm84878 @ 2/26/14 12:54 PM
+ * Created by user @ 2/26/14 12:54 PM
  */
 public class Mergesort {
 

@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by sm84878 @ 1/17/14 2:18 PM
+ * Created by user @ 1/17/14 2:18 PM
  */
 public class TestGame {
     private Game g;

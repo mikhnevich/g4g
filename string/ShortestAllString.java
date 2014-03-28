@@ -1,7 +1,7 @@
 package string;
 
 /**
- * Created by sm84878 @ 2/24/14 1:18 PM
+ * Created by user @ 2/24/14 1:18 PM
  */
 public class ShortestAllString {
    /* public String calculate(String[] allWords) {

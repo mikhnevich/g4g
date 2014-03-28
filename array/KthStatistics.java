@@ -3,7 +3,7 @@ package array;
 import java.util.Arrays;
 
 /**
- * Created by sm84878 @ 3/11/14 4:33 PM
+ * Created by user @ 3/11/14 4:33 PM
  */
 public class KthStatistics {
 

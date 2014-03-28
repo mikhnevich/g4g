@@ -1,5 +1,5 @@
 /**
- * Created by sm84878 @ 2/19/14 11:06 AM
+ * Created by user @ 2/19/14 11:06 AM
  */
 public class Heap<T extends Comparable<? super T>> {
 /*

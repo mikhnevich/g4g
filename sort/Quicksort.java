@@ -3,7 +3,7 @@ package sort;
 import java.util.Arrays;
 
 /**
- * Created by sm84878 @ 3/6/14 4:45 PM
+ * Created by user @ 3/6/14 4:45 PM
  */
 public class Quicksort {
 

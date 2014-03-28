@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by sm84878 @ 2/20/14 5:39 PM
+ * Created by user @ 2/20/14 5:39 PM
  */
 public class ReadWriteLock {
     private Map<Thread, Integer> readers = new HashMap<>();

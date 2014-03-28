@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by sm84878 @ 1/28/14 12:50 PM
+ * Created by user @ 1/28/14 12:50 PM
  */
 public class ListSorter {
 

@@ -1,5 +1,5 @@
 /**
- * Created by sm84878 @ 2/19/14 10:38 AM
+ * Created by user @ 2/19/14 10:38 AM
  */
 public class MatrixTranspose {
 

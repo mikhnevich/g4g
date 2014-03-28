@@ -1,7 +1,7 @@
 package trie;
 
 /**
- * Created by sm84878 @ 2/24/14 1:04 PM
+ * Created by user @ 2/24/14 1:04 PM
  */
 public class RadixTree<T> {
 /*    RadixTreeNode<T> root;

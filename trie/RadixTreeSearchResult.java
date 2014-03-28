@@ -3,7 +3,7 @@ package trie;
 import java.util.LinkedList;
 
 /**
- * Created by sm84878 @ 2/24/14 1:05 PM
+ * Created by user @ 2/24/14 1:05 PM
  */
 public class RadixTreeSearchResult<T> {
     public LinkedList<RadixTreeNode<T>> matchList;

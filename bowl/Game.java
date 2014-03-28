@@ -1,7 +1,7 @@
 package bowl;
 
 /**
- * Created by sm84878 @ 1/17/14 2:19 PM
+ * Created by user @ 1/17/14 2:19 PM
  */
 public class Game {
     private int itsScore = 0;

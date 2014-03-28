@@ -1,7 +1,7 @@
 package tree;
 
 /**
- * Created by sm84878 @ 2/21/14 3:16 PM
+ * Created by user @ 2/21/14 3:16 PM
  */
 public class RBTree<T extends Comparable<T>> {
     private Node root;

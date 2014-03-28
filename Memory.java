@@ -1,5 +1,5 @@
 /**
- * Created by sm84878 @ 3/13/14 3:04 PM
+ * Created by user @ 3/13/14 3:04 PM
  */
 public class Memory {
     private final int capacity;

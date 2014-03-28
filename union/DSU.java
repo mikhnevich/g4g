@@ -1,7 +1,7 @@
 package union;
 
 /**
- * Created by sm84878 @ 3/18/14 1:38 PM
+ * Created by user @ 3/18/14 1:38 PM
  */
 public class DSU {
     public final int value;

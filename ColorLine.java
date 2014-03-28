@@ -1,7 +1,7 @@
 import union.DSU;
 
 /**
- * Created by sm84878 @ 3/18/14 1:37 PM
+ * Created by user @ 3/18/14 1:37 PM
  */
 public class ColorLine {
     private DSU[] line;

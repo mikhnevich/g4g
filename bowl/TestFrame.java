@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by sm84878 @ 1/17/14 2:08 PM
+ * Created by user @ 1/17/14 2:08 PM
  */
 public class TestFrame {
     @Test

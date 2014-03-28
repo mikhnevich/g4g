@@ -1,5 +1,5 @@
 /**
- * Created by sm84878 @ 2/19/14 11:31 AM
+ * Created by user @ 2/19/14 11:31 AM
  */
 public class Sqrt {
     public static int sqrt(int n) {

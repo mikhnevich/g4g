@@ -1,7 +1,7 @@
 package tree;
 
 /**
- * Created by sm84878 @ 2/21/14 10:43 AM
+ * Created by user @ 2/21/14 10:43 AM
  */
 public class BST<T extends Comparable<T>> {
     class Node {

@@ -1,7 +1,7 @@
 package string;
 
 /**
- * Created by sm84878 @ 2/12/14 10:39 AM
+ * Created by user @ 2/12/14 10:39 AM
  */
 public class Search {
     public static int search2(String pattern, String text) {

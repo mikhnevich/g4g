@@ -1,5 +1,5 @@
 /**
- * Created by sm84878 @ 2/7/14 2:23 PM
+ * Created by user @ 2/7/14 2:23 PM
  */
 public class DisjointSet {
     public DisjointSet parent;

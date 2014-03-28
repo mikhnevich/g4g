@@ -1,7 +1,7 @@
 package tree;
 
 /**
- * Created by sm84878 @ 3/18/14 4:52 PM
+ * Created by user @ 3/18/14 4:52 PM
  */
 public class Node {
     int value;

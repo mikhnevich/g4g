@@ -11,8 +11,6 @@ package list;
 
 
  Another solution (not mine):
-
- So the algorithm implemented below can be summarized as:
  Step 1  Find the middle pointer of the linked list (you can use the slow/fast pointers)
  Step 2  Reverse the second part of the linked list (from middle->next to the end)
  Step 3  Do the reordering. (inset every element in the second part in between the elements in the first part)

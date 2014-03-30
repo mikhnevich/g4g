@@ -1,0 +1,1 @@
+1. OS concepts – virtual memory, paging, process states, paging algos.

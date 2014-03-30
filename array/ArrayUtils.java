@@ -4,10 +4,19 @@ public class ArrayUtils {
     public static void print(int[][] a) {
         final int rows = a.length;
         final int cols = a[0].length;
+        int max = 1;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
+                max = Math.max(String.valueOf(a[i][j]).length(), max);
+            }
+        }
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                int len = String.valueOf(a[i][j]).length();
                 System.out.print(a[i][j]);
-                System.out.print(' ');
+                for (int k = 0; k <= max - len; k++) {
+                    System.out.print(' ');
+                }
             }
             System.out.println();
         }

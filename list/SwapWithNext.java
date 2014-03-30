@@ -1,7 +1,5 @@
 package list;
 
-import java.util.Stack;
-
 /**
  * Created on 3/29/2014.
  * http://www.geeksforgeeks.org/amazon-interview-set-72-campus-sde-1/

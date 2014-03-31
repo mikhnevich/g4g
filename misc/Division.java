@@ -6,7 +6,7 @@ package misc;
  */
 public class Division {
 
-    int div(int a, int b) {
+    /*int div(int a, int b) {
         if (b == 0) {
             return -1;
         }
@@ -29,5 +29,5 @@ public class Division {
 
     public static void main(String[] args) {
         System.out.println(div(20, 3));
-    }
+    }*/
 }

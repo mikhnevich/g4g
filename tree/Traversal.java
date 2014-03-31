@@ -212,7 +212,6 @@ public class Traversal {
         return Ints.toArray(traversal);
     }
 
-
     public static void main(String[] args) {
         Node r = new Node(1,
                 new Node(2),

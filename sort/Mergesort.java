@@ -1,5 +1,7 @@
 package sort;
 
+import java.util.Arrays;
+
 /**
  * Created by user @ 2/26/14 12:54 PM
  */
@@ -43,5 +45,11 @@ public class Mergesort {
             array[current + i] = helper[hL + 1];
         }
 
+    }
+
+    public static void main(String[] args) {
+        final int[] a = {1, 3, 2, 5};
+        new Mergesort().mergesort(a);
+        System.out.println(Arrays.toString(a));
     }
 }

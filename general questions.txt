@@ -16,4 +16,11 @@
 16. http://blog.theliuy.com/determine-if-two-rotated-rectangles-overlap-each-other/
 17. vertical tree traversal
 18. nearest number greater than given number such that output is palindrome
-19.
+19. http://www.geeksforgeeks.org/counting-inversions/
+20. Data Structure so that push, pop, pop min, pop max. Told Solution till O(logn) by using min heap, max heap with pointers to doubly linked list nodes
+21. Binary search in rotated sorted array
+22. Sqrt
+23. http://codercareer.blogspot.com/2013/02/no-42-three-increasing-elements-in-array.html
+24. http://leetcode.com/2010/11/largest-binary-search-tree-bst-in_22.html
+25. http://leetcode.com/2010/11/convert-sorted-array-into-balanced.html
+26.

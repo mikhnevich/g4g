@@ -1,1 +1,19 @@
 1. OS concepts – virtual memory, paging, process states, paging algos.
+2. float to string
+3. Given the inorder and preorder traversals of a Binary Tree, output the postorder traversal of it.
+4. To prove that the time complexity of inserting n elements in a heap.
+5. Implement LRU
+6. combinatorics: Given a matrix (m*n), source (0, 0) & destination (m-1, n-1) (i.e. last cell), Find out total number of ways to reach the destination from the source.
+7. Given two sorted arrays, create a final sorted array. Later, the problem was extended saying that, now we have ‘m’ number of sorted arrays each of size ‘n’, now efficiently create a final array. A lot of discussion was done on complexity of the approach (both time and space).
+8. combinatorics. 3 of N, etc
+9. Given a string, find the longest substring which is palindrome. For example, if the given string is “forgeeksskeegfor”, the output should be “geeksskeeg”.
+10. KMP pattern matching
+11. Given a number N, find the smallest 3 digits number  such that product of its digits is equal to N.
+12. Trie
+13. Lock variable and their implementation (OS)
+14. http://stackoverflow.com/questions/10962379/how-to-check-intersection-between-2-rotated-rectangles
+15. http://www.ragestorm.net/tutorial?id=22
+16. http://blog.theliuy.com/determine-if-two-rotated-rectangles-overlap-each-other/
+17. vertical tree traversal
+18. nearest number greater than given number such that output is palindrome
+19.

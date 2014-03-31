@@ -3,7 +3,9 @@ package dp;
 import java.util.Arrays;
 
 /**
- * Created by user2 on 2/25/14.
+ * Created 2/25/14.
+ * Given coin array and a sum K, find min. number of required coin to make sum K.
+ *
  */
 public class Coins {
 

@@ -26,7 +26,7 @@ public class Power {
                 power--;
             } else {
                 n *= n;
-                power /= 2;
+                power >>= 1;
             }
         }
         return result;

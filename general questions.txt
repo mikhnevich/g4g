@@ -22,3 +22,6 @@
 26. Search element in a rotated array
 27. Search pivot in a rotated array
 28. http://cslibrary.stanford.edu/109/TreeListRecursion.html
+29. Shortest superstring. The Algorithm Design Manual
+30. number palindrome
+31. next bigger/smaller number from the same digits

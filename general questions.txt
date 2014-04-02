@@ -1,3 +1,4 @@
+1. virtual memory, paging, scheduling algos
 2. float to string
 4. To prove that the time complexity of inserting n elements in a heap.
 5. Implement LRU
@@ -25,3 +26,228 @@
 29. Shortest superstring. The Algorithm Design Manual
 30. number palindrome
 31. next bigger/smaller number from the same digits
+32. Given an array of numbers find all such triplets that satisfy a[i] < a[j] < a[k] where i < j < k.
+33. Given an array of numbers find the maximum count of duplets and triplets such that there sum is a multiple of three. Number that has appeared once can’t be included anywhere else.
+34. Given the stock prices of 10 days find the best possible buy sell pair.
+35. Program to rotate a matrix by 90 degree clockwise
+36. Program to convert a binary search tree into doubly linked list.
+37. Given a MXN matrix. To find the number of ways to reach the mth row and nth column cell from 0,0 cell. Find the same if some of the cells are marked as not reachable.
+38. http://stackoverflow.com/questions/3260653/algorithm-to-find-top-10-search-terms
+39. Median of 2 sorted arrays
+    http://www.geeksforgeeks.org/median-of-two-sorted-arrays/
+    http://www.geeksforgeeks.org/median-of-two-sorted-arrays-of-different-sizes/
+40. Median of N sorted arrays.
+41. heap
+42. Given array of N integers ranging from 0 to N-1. Output maximum repeating integer. Use only O(1) memory. For i = 0 to N-1, A[A[i]%N] += N. Return i with max A[i]. O(n) time.
+43. Find your own method to balance an unbalanced binary tree.(you must not use existing methods like AVL, red black or b trees).
+    Hint: There is no restriction on placing nodes. You can remove any node from any place and put it in any place.
+    I devised an algorithm which will make use of two lists. One list contains nodes far away from the root and this is sorted in decreasing order of levels and left to right if nodes are in same level. Other list contains nodes which are not fully filled. This is sorted increasing order of levels and left to right if nodes are in same level .
+    Remove the first node (listed in list1) and insert as a child of first node in list2.add this node also in list 2. Do this operation until the height of the tree becomes log(n). Interviewer was impressed with this and finished the interview.
+44. Find min and max element of an unsorted integer array in O((n/2)*3)
+45. LCA of K given nodes in a n-ary tree
+46. Sliding window minimum
+47. hashing function
+48. Implement 2 stacks in an array. What if want change size dynamically. 3 stacks. K stacks.
+49. Check if an undirected graph is a tree or not.
+50. Given an array of integers, print the 2 elements with least absolute difference.
+51. find an element in sorted row/col matrix
+52. Given a position where a knight is placed on an nXn chessboard. Find the maximum number of knights that can be placed on the board, so that no 2 knights attack each other.
+53. in-place shuffling + proof
+54. Add three numbers represented as linked lists
+55. Connect same level nodes without level order traversal.
+56. Print cousins of a given node
+57. Longest path in a tree with just one bend. May or may not start with from the root.
+58. Convert a given number to Roman numbers. Vice versa.
+59. Check if a tree is a subtree of another.
+60. You are given an array in which you’ve to find a subarray such that the sum of elements in it is equal to zero.
+    time complexity is O(n) and space complexity is O(n)
+
+    hash the sum from 0 to i for all array elements, i.e sum[i] = sum of all elements from a[0] to a[i] and corresponding index as data to key (starting from -1 to n)
+
+    ex: 2 3 -4 9 -1 -7 -5 6 5
+
+    sum to enter in hash table : 0 2 5 1 10 9 2 -3 3 8
+    index to enter in hash table: -1 0 1 2 3 4 5 6 7 8
+
+    hash sum as key and its corresponding index as data. and while hashing check if any sum is already exists in hash table
+
+    here there is one duplicate number that is 2 in sum array... the indexes of duplicate numbers is 0 and 5, so we need to take sum from index 1 to 5 in original array that is 3 to -7
+
+    if there are no duplicates in sum array then sub-array with sum ZERO doesn't exists in given array
+    ------------
+    Found in Stackoverflow:
+
+    This algorithm will find all subarrays with sum 0 and it can be easily modified to find the minimal one or to keep track of the start and end indexes. This algorithm is O(n).
+
+    Given an int[] input array, you can create an int[] tmp array where tmp[i] = tmp[i - 1] + input[i]; Each element of tmp will store the sum of the input up to that element.
+
+    Now if you check tmp, you'll notice that there might be values that are equal to each other. Let's say that this values are at indexes j an k with j < k, then the sum of the input till j is equal to the sum till k and this means that the sum of the portion of the array between j and k is 0! Specifically the 0 sum subarray will be from index j + 1 to k.
+
+    NOTE: if j + 1 == k, then k is 0 and that's it! ;)
+    NOTE: The algorithm should consider a virtual tmp[-1] = 0;
+    NOTE: An empty array has sum 0 and it's minimal and this special case should be brought up as well in an interview. Then the interviewer will say that doesn't count but that's another problem! ;)
+    The implementation can be done in different ways including using a HashMap with pairs but be careful with the special case in the NOTE section above.
+
+    Example:
+
+    int[] input = {4, 6, 3, -9, -5, 1, 3, 0, 2}
+    int[] tmp = {4, 10, 13, 4, -1, 0, 3, 3, 5}
+    Value 4 in tmp at index 0 and 3 ==> sum tmp 1 to 3 = 0, length (3 - 1) + 1 = 4
+    Value 0 in tmp at index 5 ==> sum tmp 0 to 5 = 0, length (5 - 0) + 1 = 6
+    Value 3 in tmp at index 6 and 7 ==> sum tmp 7 to 7 = 0, length (7 - 7) + 1 = 1
+    UPDATE
+
+    Assuming that in our tmp array we end up with multiple element with the same value then you have to consider every identical pair in it! Example (keep in mind the virtual '0' at index '-1'):
+
+    int[] array = {0, 1, -1, 0}
+    int[] tmp = {0, 1, 0, 0}
+    By applying the same algorithm described above the 0-sum subarrays are delimited by the following indexes (included):
+
+    [0] [0-2] [0-3] [1-2] [1-3] [3]
+
+    Although the presence of multiple entries with the same value might impact the complexity of the algorithm depending on the implementation, I believe that by using an inverted index on tmp (mapping a value to the indexes where it appears) we can keep the running time at O(n).
+
+61. A skeleton of a binary tree with nodes having garbage values is given and an array is given. Had to fill up the binary tree skeleton with the values in array such that the resulting tree is a BST.
+    Solution: sort the array, enter the values in an in-order fashion
+62. merge sort
+63. Least distance between two values in a very big binary tree (Binary tree may contain same value in many nodes).
+
+    		          5
+    	       1             7
+    	   4      3	      8	    2
+        1
+    {Least distance is 3 between 1 and 2 (not 5). }
+    http://www.geeksforgeeks.org/amazon-interview-set-50-campus-sde/
+    http://coding-interview-archives.blogspot.in/2013/10/given-binary-tree-which-can-have.html
+64. find maximum profit in an array of stocks prices for consecutive days in two cases, one I can sell and buy any number of times I want, second, I can only buy and sell one time.
+65.  Given a binary tree. I need to print the nodes in vertical line zigzag manner. For example: 1st vertical line from top to bottom, 2nd vertical line from bottom to top,3rd vertical line from top to bottom and so on
+
+                           5
+                        /     \
+                       3       7
+                      / \     / \
+     		         1   4   6   8
+                        /    \     \
+    		           2	  9    10
+    Answer would be –
+    1
+    2 3
+    5 4 6
+    9 7
+    8
+    10
+66. Given a string. Write a program to form a string with first character of all words. Ex: The bucket is full of water
+67. Spiral level order traversal without using extra variable for detecting level (using one stack and one queue) and few other implementations as well.
+68.  Given a String s and int r , first fill each character row wise and print column wise.
+    for e.g. String s = “abcdefgh” and r = 3
+    so filling column wise would give :
+    a d g
+    b e h
+    c f
+
+    and final ans would be adgbehcf.
+    he just wanted the exact output. Internally how we handle string was not concern.
+69. : Given a linked list, write a function to reverse every k nodes (where k is an input to the function).
+    Example:
+    Inputs: 1->2->3->4->5->6->7->8->NULL and k = 3
+    Output: 3->2->1->6->5->4->8->7->NULL.
+    Inputs: 1->2->3->4->5->6->7->8->NULL and k = 5
+    Output: 5->4->3->2->1->8->7->6->NULL.
+70. iteratively sum numbers represented by linked lists
+71. Which data structure would you use to keep records of stock market?
+
+    I asked him to clarify the problem statement.
+
+    He then asked me : Suppose you have to maintain the stock values of various companies during various periods and return minimum stock value of a particular company over a given period of time.
+
+    I answered segment tree (Probably the correct answer was queue data structure).
+    However the interviewer proceeded with questions on segment tree.
+    He asked me to write a code for
+    a) Creating a segment tree
+    b)	Performing range minimum query in a segment tree
+    c) Updating the segment tree
+    He asked me to analyze the time complexity for building the segment tree and performing the range minimum query in the segment tree.
+    He then asked me: If you are to maintain the stock value of a company for the past 6 months..then you have to update the segment tree every day by deleting a stock value and inserting a new stock value. How would you do that?
+    Here I got stuck and could not perform the updation in better than O(n) time.(However using queue it can be performed in O(1) time)
+72. Persistent data structures. http://courses.csail.mit.edu/6.854/06/scribe/s2-persistent.pdf  http://www.cs.cmu.edu/~sleator/papers/another-persistence.pdf
+73. store/read binary tree
+74. An array of integers is given, find all the ranges present in the array.
+    eg. 1 6 4 2 3 — ranges will be {1-4} and {6}.
+77. Two strings are given. One of them is the initial string and other string contains characters as per their priority. Sort the initial string as per the given second string. characters in initial string may or may not be present in the second string. If not present, sort them in lexicographical order at the end of output.
+    eg. String1 – ddloyc, String2 – odl
+    Output – oddlcy
+78. http://www.geeksforgeeks.org/reservoir-sampling/
+79. http://www.geeksforgeeks.org/print-all-combinations-of-balanced-parentheses/
+80. N number of jars are kept in a linear fashion. Each jar contains a color whose value ranges from 0-99. Now you can mix any two adjacent jars having colors ‘a’ and ‘b’ (both integers), and it will produce a new color of the value (a+b) mod 100 and will also produce smoke with value (a*b). Mix all the jars in a way such that in the end only one jar remains and total smoke produced is minimum.
+    http://www.spoj.com/problems/MIXTURES/
+81. Given a number, find the next minimal greater number with same number of set bits
+82. Given a linked list with next and arbit pointer. Clone the list
+83. avl trees
+84. segment tree
+85. How do I calculate the k nearest numbers to the median?
+86. circular buffer array
+87. Given a binary tree, no two adjacent nodes have same color, but all leaves should be in same color. You can fill only with two colors. Write a function to find whether a given tree can be colored using above scenario
+88. Given a binary tree, change the right pointer of every leaf node to the next leaf node (right to it but may be on different level).
+89. Given a matrix with 1s and 0s, u have to construct a matrix such that a[i][j]=1, if only every element in ith row and jth column is 1, otherwise 0. You have to use constant space and O(mn) time complexity.
+90. Maze solve problem. Given a matrix with 1s and 0s, 0 represents free path, 1 represents blocked area, and you can move in any of the 8 directions. Find the path from source to destination and print it. Then he told me that he can change destination at run time. And asked me to do for that.
+91. Given an array, find the longest increasing subsequence of size 3 with max product, all numbers are positive.
+92. Delete all leaf nodes in a tree.
+93. Find the peak in an array, array is first increasing then decreasing. Peak is the max element.
+94. Infinite stream of bits is coming, after every bit comes, you have to determine whether the number formed with bits till now is divisible by 3 or not, you cannot form the number as it will overflow at some stage.
+95. Given an array of numbers, find the minimum value of the absolute difference that can be obtained from any pair of numbers from the array.
+96. You are given an array whose each element represents the height of the tower. The width of every tower is 1. It starts raining. How much water is collected between the towers?
+    Eg. [1,5,3,7,2] – then answer is 2 units between towers 5 and 7.
+97. What is a height balanced tree. Give an O(n) solution to balance it. Then he changed the definition of a balanced tree as- a tree is balanced if every node in a particular level should have the same number of descendants (and not only direct children). And every node can have any number of children. I had to design the class and then write the code for it.
+98. Given an array of integers, find an index such that if you split the array into two parts the absolute value of the difference between the sum of elements in both parts had to be minimum. After giving him the logic, he changed it to split it into 3 parts such that sum of elements in all of them are equal. I had to code this one.
+99. http://stackoverflow.com/questions/731832/interview-question-ffn-n/731857#731857
+100. http://stackoverflow.com/questions/1132350/recursion-cut-array-of-integers-in-two-parts-of-equal-sum-in-a-single-pass
+101. http://people.cs.clemson.edu/~bcdean/dp_practice/
+102. max contig sum (+- values)
+103. Given an array of positive numbers, find the maximum sum of a subsequence with the constraint that no 2 numbers in the sequence should be adjacent in the array. So 3 2 7 10 should return 13 (sum of 3 and 10) or 3 2 5 10 7 should return 15 (sum of 3, 5 and 7).
+104. n1 pairs of “{} ” brackets
+     n2 pairs of “[] ” brackets
+     n3 pairs of “() ” brackets
+     I have to find the all valid combinations of all the pairs.
+105. Given an array of n numbers with repetition of numbers. You need to find the max length of continuous sub array with at max 3 unique elements.
+     For eg
+     array: 1 2 3 1 4 3 4 1 2
+     ans: 6 (3 1 4 3 4 1)
+     Solution: Time complexity O(n)
+     Extra Space O(1)
+106. Suppose u given normal deck of cards 4 suites and 13 cards of each suite in which one card is missing
+     you are picking a card one at a time and sees that card and putting it aside
+     Find the suite and number of missing card.
+     Then he said change the number of suites to K (very very large you cant add till k)
+     and N numbers (again very large numbers)
+107. 100 floors and 2 egg problem changed to 50 floors and 2 eggs
+108.  You are given array of numbers which increasing first then decreasing. Find the greates number.
+     eg: 1 2 3 4 5 4 3
+     answer: 5
+     Solution : Time Complexity O(logn)
+     Space Complexity O(1)
+109. http://discuss.joelonsoftware.com/default.asp?interview.11.437754.20
+     http://stackoverflow.com/questions/3172179/valid-permutation-of-parenthesis
+     http://stackoverflow.com/questions/18045456/how-many-valid-parenthesis-combinations
+110. matrix spiral
+111. Given array of ints. Assuming total no. of elements is even. Need to tell whether this array can be grouped in sets of pairs such that sum of each pair is divisible by K.
+     eg: 0,2,4,8,12,20,18,4 and k=4
+     so (0,8), (2,18), (4,20), (4,12) is one such set in which sum of each pair is divisible by k.
+112. Given a linked list and 2 integers M and N.. Keep M nodes and delete N nodes repetitively till the end of linkedlist.
+113. Given a BT check if there is a BST in it. If it exists print the largest BST in the BT
+114. infinite length chess board and if given two knights in a chess board .find minimum hops required for them meet.
+115.  if we encode A-1 , B-2 , C-3 , I send a word CAMP encoded as 311316. It can be decoded as 3 11 3 16 (CKCP), 3 1 1 3 16(CAACP) , 3 1 1 3 1 6 , (CAACAF) . given a input encoded string find the no. ways it can be decoded. (ACODE prob. in Spoj)
+          311316 – 4
+          ->Could n’t come up with DP solution at first so gave a solution with recursion tree. He asked me to optimise to avoid unnecessary computations.. Finally Solved it using DP.
+116. clone list with a random pointer. Modifying the original list. No modification but extra space is allowed.
+117. Different types of scheduling and what type of scheduler does linux have and why.
+         	h) doeslinux have preemptive scheduling and few questions on virtual memory.
+118. There is a sentence that your friend knows, but while giving it to you, he lost all the spaces. You have to dictionary with you. How would you reconstruct the original sentence using it.
+119. Exercise:
+     1. Find a subsequence of size 3 such that arr[i] < arr[j] > arr[k].
+     2. Find a sorted subsequence of size 4 in linear time
+120.
+
+
+Muthukrishnan - "Data Streams: Algorithms and Applications", http://books.google.com/books?id=415loiMd_c0C&lpg=PP1&dq=Data%20Streams%3A%20Algorithms%20and%20Application&hl=el&pg=PA33#v=onepage&q&f=false
+Manku, Motwani - "Approximate Frequency Counts over Data Streams" [pdf], http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.19.8594&rep=rep1&type=pdf
+

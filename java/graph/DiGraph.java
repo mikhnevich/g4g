@@ -17,6 +17,16 @@ public class DiGraph {
         }
     }
 
+    public DiGraph(In in) {
+        this(in.readInt());
+        int E = in.readInt();
+        if (E < 0) throw new IllegalArgumentException("Number of edges must be nonnegative");
+        for (int i = 0; i < E; i++) {
+            int v = in.readInt();
+            int w = in.readInt();
+            addEdge(v, w);
+        }
+    }
     public void addEdge(int v, int u) {
         adj[v].add(u);
         E++;

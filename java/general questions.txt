@@ -247,6 +247,24 @@
      2. Find a sorted subsequence of size 4 in linear time
 120.
 
+1. Given an array in which elements are first increasing and then decreasing. find the maximum element in the array.
+
+2. Given an array of unsorted elements, find the minimum difference between any 2 elements in the array.
+
+Given 2 strings str1 and str2. What is the efficient way to navigate from str1 to str2? The constraints are i) a string can be changed to another string by changing only one character. ii) all the intermediate strings must be present in dictionary. If not possible, return “not possible to navigate from str1 to str2″. (pre-processing is allowed and enough memory is available). for example: str1 = feel and str2 = pelt, then the navigation is feel -> fell -> felt -> pelt (Hint: Graph)
+
+Given two numbers represented by two linked lists, write a function that returns sum list. The sum list is linked list representation of addition of two input numbers. It is not allowed to modify the lists. Also, not allowed to use explicit extra space.
+
+ Given a matrix of characters and a string, find whether the string can be obtained from the matrix. From each character in the matrix, we can move up/down/right/left. for example, if the matrix[3][4] is
+
+o f a s
+
+l l q w
+
+z o w k
+and the string is follow, then the function should return true.
+
+
 
 Muthukrishnan - "Data Streams: Algorithms and Applications", http://books.google.com/books?id=415loiMd_c0C&lpg=PP1&dq=Data%20Streams%3A%20Algorithms%20and%20Application&hl=el&pg=PA33#v=onepage&q&f=false
 Manku, Motwani - "Approximate Frequency Counts over Data Streams" [pdf], http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.19.8594&rep=rep1&type=pdf

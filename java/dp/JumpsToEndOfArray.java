@@ -1,8 +1,5 @@
 package dp;
 
-import array.ArrayUtils;
-
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**
@@ -26,7 +23,8 @@ public class JumpsToEndOfArray {
         if (len == 0 || a[0] == 0) {
             return -1;
         }
-        Arrays.fill(a, Integer.MAX_VALUE);
+        int[] jumps = new int[a.length];
+        Arrays.fill(jumps, Integer.MAX_VALUE);
 
         int[] S = new int[len];
         for (int i = 1; i < len; i++) {

@@ -7,7 +7,8 @@ import org.junit.Test;
  * Created on 4/18/2014.
  */
 public class AuctionSniperEndToEndTest {
-    private final FakeAuctionServer auction = new FakeAuctionServer("item-54321");
+    public static final String ITEM_ID = "item-54321";
+    private final FakeAuctionServer auction = new FakeAuctionServer(ITEM_ID);
     private final ApplicationRunner application = new ApplicationRunner();
 
     @Test
@@ -39,6 +40,7 @@ public class AuctionSniperEndToEndTest {
         auction.hasReceivedJoinRequestFrom(ApplicationRunner.SNIPER_XMPP_ID); // Step 3
 
         auction.reportPrice(1000, 98, "other bidder");
+        Thread.sleep(5000);
         application.hasShownSniperIsBidding(1000, 1098);
 
         auction.hasReceivedBid(1098, ApplicationRunner.SNIPER_XMPP_ID);

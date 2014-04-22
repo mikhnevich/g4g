@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import static auction_sniper.AuctionEventListener.PriceSource.FromOtherBidder;
 import static auction_sniper.AuctionEventListener.PriceSource.FromSniper;
+import static auction_sniper.AuctionSniperEndToEndTest.ITEM_ID;
 
 /**
  * Created on 4/18/2014.
@@ -32,9 +33,13 @@ public class AuctionSniperTest {
 
     @Test
     public void reportsLostWhenAuctionClosesWhenBidding() {
+        final int price = 1001;
+        final int increment = 25;
+        final int bid = price + increment;
         context.checking(new Expectations() {{
             ignoring(auction);
-            allowing(sniperListener).sniperBidding();
+            allowing(sniperListener).sniperBidding(with(any(SniperState.class)));
+//            allowing(sniperListener).sniperBidding(new SniperState(ITEM_ID, price, bid));
             then(sniperState.is("bidding"));
             atLeast(1).of(sniperListener).sniperLost();
             when(sniperState.is("bidding"));
@@ -47,9 +52,10 @@ public class AuctionSniperTest {
     public void bidsHigherAndReportsBiddingWhenNewPriceArrives() {
         final int price = 1001;
         final int increment = 25;
+        final int bid = price + increment;
         context.checking(new Expectations() {{
             oneOf(auction).bid(price + increment);
-            atLeast(1).of(sniperListener).sniperBidding();
+            atLeast(1).of(sniperListener).sniperBidding(new SniperState(ITEM_ID, price, bid));
         }});
 
         sniper.currentPrice(price, increment, FromOtherBidder);

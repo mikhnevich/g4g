@@ -7,7 +7,10 @@ package array;
  *
  You can find the median in O(n), w.g. using the O(n) nth_element algorithm.
 
- You loop through all elements substutiting each with a pair: <the absolute difference to the median>, <element's value>. Once more you do nth_element with n = k. after applying this algorithm you are guaranteed to have the k smallest elements in absolute difference first in the new array. You take their indices and DONE!
+ You loop through all elements substutiting each with a pair:
+ <the absolute difference to the median>, <element's value>. Once more you do nth_element with n = k.
+ after applying this algorithm you are guaranteed to have the k smallest elements in absolute difference
+ first in the new array. You take their indices and DONE!
 
  Your algorithm, on the other hand uses sorting, and this makes it O(nlogn).
 

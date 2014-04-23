@@ -33,4 +33,12 @@ public class ArrayUtils {
             System.out.println();
         }
     }
+
+    public static void print(boolean[] a) {
+        final int rows = a.length;
+        for (int i = 0; i < rows; i++) {
+            System.out.print(a[i] ? 1 : 0);
+            System.out.print(' ');
+        }
+    }
 }

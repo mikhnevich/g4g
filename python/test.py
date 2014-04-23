@@ -1,0 +1,6 @@
+a = set('abracadabra')
+b = set('alacazam')
+print("Minus:", a - b)
+print("Or:", a | b)
+print("And:", a & b)
+print("Xor:", a ^ b)

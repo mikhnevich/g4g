@@ -240,8 +240,7 @@
 116. clone list with a random pointer. Modifying the original list. No modification but extra space is allowed.
 117. Different types of scheduling and what type of scheduler does linux have and why.
          	h) doeslinux have preemptive scheduling and few questions on virtual memory.
-118. There is a sentence that your friend knows, but while giving it to you, he lost all the spaces.
-	You have to dictionary with you. How would you reconstruct the original sentence using it.
+
 119. Exercise:
      1. Find a subsequence of size 3 such that arr[i] < arr[j] > arr[k].
      2. Find a sorted subsequence of size 4 in linear time

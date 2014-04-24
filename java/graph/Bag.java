@@ -1,6 +1,7 @@
 package graph;
-        import java.util.Iterator;
-        import java.util.NoSuchElementException;
+
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class Bag<T> implements Iterable<T> {
     private int N;               // number of elements in bag
@@ -22,6 +23,7 @@ public class Bag<T> implements Iterable<T> {
 
     /**
      * Is this bag empty?
+     *
      * @return true if this bag is empty; false otherwise
      */
     public boolean isEmpty() {
@@ -30,6 +32,7 @@ public class Bag<T> implements Iterable<T> {
 
     /**
      * Returns the number of items in this bag.
+     *
      * @return the number of items in this bag
      */
     public int size() {
@@ -38,6 +41,7 @@ public class Bag<T> implements Iterable<T> {
 
     /**
      * Adds the item to this bag.
+     *
      * @param item the item to add to this bag
      */
     public void add(T item) {
@@ -51,9 +55,10 @@ public class Bag<T> implements Iterable<T> {
 
     /**
      * Returns an iterator that iterates over the items in the bag in arbitrary order.
+     *
      * @return an iterator that iterates over the items in the bag in arbitrary order
      */
-    public Iterator<T> iterator()  {
+    public Iterator<T> iterator() {
         return new ListIterator<T>(first);
     }
 
@@ -65,8 +70,13 @@ public class Bag<T> implements Iterable<T> {
             current = first;
         }
 
-        public boolean hasNext()  { return current != null;                     }
-        public void remove()      { throw new UnsupportedOperationException();  }
+        public boolean hasNext() {
+            return current != null;
+        }
+
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
 
         public Item next() {
             if (!hasNext()) throw new NoSuchElementException();

@@ -229,19 +229,18 @@
      http://stackoverflow.com/questions/3172179/valid-permutation-of-parenthesis
      http://stackoverflow.com/questions/18045456/how-many-valid-parenthesis-combinations
 110. matrix spiral
-111. Given array of ints. Assuming total no. of elements is even. Need to tell whether this array can be grouped in sets of pairs such that sum of each pair is divisible by K.
+111. Given array of ints. Assuming total no. of elements is even. Need to tell whether this array can be grouped in sets of pairs such that
+	sum of each pair is divisible by K.
      eg: 0,2,4,8,12,20,18,4 and k=4
      so (0,8), (2,18), (4,20), (4,12) is one such set in which sum of each pair is divisible by k.
 112. Given a linked list and 2 integers M and N.. Keep M nodes and delete N nodes repetitively till the end of linkedlist.
 113. Given a BT check if there is a BST in it. If it exists print the largest BST in the BT
-114. infinite length chess board and if given two knights in a chess board .find minimum hops required for them meet.
-115.  if we encode A-1 , B-2 , C-3 , I send a word CAMP encoded as 311316. It can be decoded as 3 11 3 16 (CKCP), 3 1 1 3 16(CAACP) , 3 1 1 3 1 6 , (CAACAF) . given a input encoded string find the no. ways it can be decoded. (ACODE prob. in Spoj)
-          311316 – 4
-          ->Could n’t come up with DP solution at first so gave a solution with recursion tree. He asked me to optimise to avoid unnecessary computations.. Finally Solved it using DP.
+
+
 116. clone list with a random pointer. Modifying the original list. No modification but extra space is allowed.
 117. Different types of scheduling and what type of scheduler does linux have and why.
          	h) doeslinux have preemptive scheduling and few questions on virtual memory.
-118. There is a sentence that your friend knows, but while giving it to you, he lost all the spaces. You have to dictionary with you. How would you reconstruct the original sentence using it.
+
 119. Exercise:
      1. Find a subsequence of size 3 such that arr[i] < arr[j] > arr[k].
      2. Find a sorted subsequence of size 4 in linear time
@@ -250,20 +249,6 @@
 1. Given an array in which elements are first increasing and then decreasing. find the maximum element in the array.
 
 2. Given an array of unsorted elements, find the minimum difference between any 2 elements in the array.
-
-Given 2 strings str1 and str2. What is the efficient way to navigate from str1 to str2? The constraints are i) a string can be changed to another string by changing only one character. ii) all the intermediate strings must be present in dictionary. If not possible, return “not possible to navigate from str1 to str2″. (pre-processing is allowed and enough memory is available). for example: str1 = feel and str2 = pelt, then the navigation is feel -> fell -> felt -> pelt (Hint: Graph)
-
-Given two numbers represented by two linked lists, write a function that returns sum list. The sum list is linked list representation of addition of two input numbers. It is not allowed to modify the lists. Also, not allowed to use explicit extra space.
-
- Given a matrix of characters and a string, find whether the string can be obtained from the matrix. From each character in the matrix, we can move up/down/right/left. for example, if the matrix[3][4] is
-
-o f a s
-
-l l q w
-
-z o w k
-and the string is follow, then the function should return true.
-
 
 
 Muthukrishnan - "Data Streams: Algorithms and Applications", http://books.google.com/books?id=415loiMd_c0C&lpg=PP1&dq=Data%20Streams%3A%20Algorithms%20and%20Application&hl=el&pg=PA33#v=onepage&q&f=false

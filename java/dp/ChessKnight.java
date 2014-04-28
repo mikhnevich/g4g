@@ -40,5 +40,6 @@ hops is required to get from the position to the destination (+)
         int verticalDirection = (int) Math.signum(row2 - row1);
 
 //        while (row)
+        return 0;
     }
 }

@@ -41,4 +41,12 @@ public class ArrayUtils {
             System.out.print(' ');
         }
     }
+
+    public static void swap(int[] a, int i, int j) {
+        if (i >= 0 && j >= 0 && i < a.length && j < a.length) {
+            int tmp = a[i];
+            a[i] = a[j];
+            a[j] = tmp;
+        }
+    }
 }

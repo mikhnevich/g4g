@@ -41,6 +41,32 @@ public class ConvertToDll {
         return root;
     }
 
+    private static class State {
+        Node head;
+        Node prev;
+    }
+
+    public static Node convert2(Node root) {
+        State state = new State();
+        convert2(root, state);
+        return state.head;
+    }
+
+    public static void convert2(Node root, State state) {
+        if (root == null) {
+            return;
+        }
+        convert2(root.left, state);
+        if (state.prev == null) {
+            state.head = root;
+        } else {
+            state.prev.right = root;
+            root.left = state.prev;
+        }
+        state.prev = root;
+        convert2(root.right, state);
+    }
+
     public static void main(String[] args) {
         Node root2 = new Node(4,
                 new Node(2,
@@ -71,11 +97,24 @@ public class ConvertToDll {
                         new Node(6)
                 )
         );
+        Node root2Copy = TreeUtils.copy(root2);
         Node c = convert(root2);
         Node t = c;
         do {
-            System.out.println(t.value);
+            System.out.print(t.value);
+            System.out.print(' ');
             t = t.right;
         } while (c.value != t.value);
+        System.out.println();
+
+        Node c2 = convert2(root2Copy);
+        t = c2;
+        do {
+            System.out.print(t.value);
+            System.out.print(' ');
+            t = t.right;
+        } while (t != null);
+        System.out.println();
+
     }
 }

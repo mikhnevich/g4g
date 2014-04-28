@@ -66,12 +66,29 @@ public class LongestCommonSubsequence {
             }
         }
         ArrayUtils.print(S);
+        int i = st1L;
+        int j = st2L;
+        StringBuilder sb = new StringBuilder();
+        while (i > 0 && j > 0) {
+            if (st1.charAt(i - 1) == st2.charAt(j - 1)) {
+                sb.insert(0, st1.charAt(i - 1));
+                i--;
+                j--;
+            } else {
+                if (S[i - 1][j] > S[i][j - 1]) {
+                    i--;
+                } else {
+                    j--;
+                }
+            }
+        }
+        System.out.println(sb.toString());
         return max;
     }
 
     public static void main(String[] args) {
-        String st1 = "ABCDGH";
-        String st2 = "AEDFHR";
+        String st1 = "MZJAWXU";
+        String st2 = "XMJYAUZ";
         System.out.println(lcs(st1, st2));
         System.out.println(lcsIterative(st1, st2));
     }

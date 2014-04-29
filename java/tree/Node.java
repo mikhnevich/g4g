@@ -7,6 +7,7 @@ public class Node {
     int value;
     Node left;
     Node right;
+    int height = 1;
 
     public Node(int value) {
         this.value = value;

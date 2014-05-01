@@ -85,7 +85,7 @@ public class RedBlackTree {
 
 
     private Node rightRotate(Node x) {
-
+        return null;
     }
 
 

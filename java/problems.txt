@@ -1,0 +1,54 @@
+Tree
+1. preorder, inorder, postorder traversal
+2. level traversal
+3. level zig-zag traversal
+4. preorder, inorder, postorder traversal iterative
+5. morris traversal
+6. in/pre/post order iterators
+    http://n00tc0d3r.blogspot.com.au/2013/08/implement-iterator-for-binarytree-iii.html
+7. diameter
+8. catalan's number
+9. AVL tree implementation
+10. Red-black tree implementation
+11. Treap implementation
+12. 2-3-4 trees
+13. suffix tree
+14. trie
+15. transform a binary tree to a heap, balance a binary tree, and balance a BST.
+
+
+Array:
+1. array majority algorithm
+    http://n00tc0d3r.blogspot.com.au/2013/07/find-majority.html, + Moor's voting
+2. ascending minima/maxima
+3. inversions count
+4. 2/3/4/k sum
+5. Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
+   For example: Given [0,1,0,2,1,0,1,3,2,1,2,1], return 6
+
+Graph:
+1. Find word in char matrix
+2. word ladder
+3.
+
+DP:
+1. Maximum Sum of Non-contiguous Subsequences
+2. number of unique paths, MxN grid. Solve mathematically.
+3. Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.
+4. text justification
+
+
+Heap:
+1. min/max heap implementation
+2. fibonacci heap impl
+3. running median in stream of integers
+
+
+General:
+1. virtual memory, paging, scheduling algos
+2. consistent hashing
+3. bloom filter
+4. hashmap algorithm. why coprime.
+
+
+

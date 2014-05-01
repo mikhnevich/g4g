@@ -1,4 +1,6 @@
 1. virtual memory, paging, scheduling algos
+2. consistent hashing
+
 2. float to string
 4. To prove that the time complexity of inserting n elements in a heap.
 5. Implement LRU

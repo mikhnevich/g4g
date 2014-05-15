@@ -1,5 +1,8 @@
 package misc;
 
+/**
+ * Created @ 4/30/2014
+ */
 public class Addition {
 
     public static int add(int a, int b) {

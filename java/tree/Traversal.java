@@ -98,6 +98,34 @@ public class Traversal {
         return Ints.toArray(traversal);
     }
 
+    // morris travel
+    public static int[] inorderConstantSpace(Node root) {
+        Node cur = root;
+        List<Integer> values = new ArrayList<>();
+
+        while (cur != null) {
+            if (cur.left != null) {
+                Node pre = cur.left;
+                while (pre.right != null && pre.right != cur) {
+                    pre = pre.right;
+                }
+
+                if (pre.right == null) { // set right to successor
+                    pre.right = cur;
+                    cur = cur.left;
+                } else { // visit and revert the change
+                    pre.right = null;
+                    values.add(cur.value);
+                    cur = cur.right;
+                }
+            } else {
+                values.add(cur.value);
+                cur = cur.right;
+            }
+        }
+        return Ints.toArray(values);
+    }
+
     public static int[] postorder(Node root) {
         List<Integer> traversal = new ArrayList<>();
         postorder(root, traversal);
@@ -258,6 +286,9 @@ public class Traversal {
 
         traversal = inorderIterativeLeetCode(r3);
         System.out.println("inorder iterative leet: " + Arrays.toString(traversal));
+
+        traversal = inorderConstantSpace(r3);
+        System.out.println("inorder constant space: " + Arrays.toString(traversal));
 
         traversal = postorder(r3);
         System.out.println("postorder: " + Arrays.toString(traversal));

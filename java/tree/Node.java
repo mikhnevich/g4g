@@ -20,6 +20,8 @@ public class Node {
     Color color = Color.Red;
     Node p;
 
+    Node nextRight;
+
     public Node(int value) {
         this.value = value;
     }

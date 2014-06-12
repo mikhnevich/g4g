@@ -3,7 +3,10 @@ package dp;
 import array.ArrayUtils;
 
 /**
- * Created by sm84878 @ 4/21/2014 16:16
+ * Created @ 4/21/2014
+ *
+ * @see <a href="http://www.geeksforgeeks.org/dynamic-programming-set-11-egg-dropping-puzzle">geeksforgeeks</a>
+ *
  */
 public class EggDropping {
     public static int solve(int floors, int eggs) {

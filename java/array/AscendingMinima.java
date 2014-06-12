@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by sm84878 @ 4/28/2014 10:51
+ * Created @ 4/28/2014
  */
 public class AscendingMinima {
     private static final class Entry {

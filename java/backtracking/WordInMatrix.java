@@ -1,7 +1,7 @@
 package backtracking;
 
 /**
- * Created by sm84878 @ 4/23/2014 10:28
+ * Created @ 4/23/2014
  
   Given a matrix of characters and a string, find whether the string can be obtained from the matrix. 
  From each character in the matrix, we can move up/down/right/left. for example, 

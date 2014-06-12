@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by sm84878 @ 4/28/2014 09:44
+ * Created @ 4/28/2014
  */
 public class MovingAverage {
     private final List<Integer> list;

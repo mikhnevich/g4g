@@ -1,7 +1,7 @@
 package list;
 
 /**
- * Created by sm84878 @ 4/22/2014 16:09
+ * Created @ 4/22/2014
  */
 public class Numbers {
     public static Node add(Node n1, Node n2) {

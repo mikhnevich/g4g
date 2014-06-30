@@ -1,7 +1,7 @@
 package geometry;
 
 /**
- * Created by sm84878 @ 6/6/2014 10:00 AM
+ * Created @ 6/6/2014
  */
 public class Line {
     public int x1;

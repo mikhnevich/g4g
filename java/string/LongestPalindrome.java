@@ -1,7 +1,7 @@
 package string;
 
 /**
- * Created by sm84878 @ 3/31/2014 17:42
+ * Created @ 3/31/2014
  * http://www.geeksforgeeks.org/longest-palindrome-substring-set-1/
  * http://www.geeksforgeeks.org/longest-palindromic-substring-set-2/
  * http://www.geeksforgeeks.org/dynamic-programming-set-12-longest-palindromic-subsequence/

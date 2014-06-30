@@ -4,7 +4,9 @@ import array.ArrayUtils;
 
 /**
  * Created @ 4/21/2014
- * TODO add algorithm description and link
+ *
+ * @see <a href="http://www.geeksforgeeks.org/dynamic-programming-set-11-egg-dropping-puzzle">geeksforgeeks</a>
+ *
  */
 public class EggDropping {
     public static int solve(int floors, int eggs) {

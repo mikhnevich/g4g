@@ -4,6 +4,7 @@ package tree;
  * Created @ 6/9/2014
  *
  * http://www.geeksforgeeks.org/connect-nodes-at-same-level-with-o1-extra-space/
+ * TODO iterative
  *
  * Write a function to connect all the adjacent nodes at the same level in a binary tree.
  *
@@ -20,8 +21,6 @@ package tree;
    B-->C-->NULL
   / \   \
  D-->E-->F-->NULL
-
- TODO http://leetcode.com/2010/03/first-on-site-technical-interview.html
  *
  */
 public class ConnectNodesOnTheSameLevel {

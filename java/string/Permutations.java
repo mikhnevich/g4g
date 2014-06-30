@@ -1,3 +1,5 @@
+package string;
+
 import javax.xml.transform.Result;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -21,6 +23,10 @@ public class Permutations {
     }
 
     public static void main(String[] args) {
-        System.out.println(getPermutations("abc"));
+        List<String> result = getPermutations("астчлоак");
+        for (String s : result) {
+            System.out.println(s);
+        }
+        System.out.println(result.size());
     }
 }

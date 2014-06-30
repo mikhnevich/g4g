@@ -3,7 +3,8 @@ package tree;
 /**
  * Created on 3/27/2014.
  * http://www.geeksforgeeks.org/add-greater-values-every-node-given-bst/
- Given a Binary Search Tree (BST), modify it so that all greater values in the given BST are added to every node. For example, consider the following BST.
+ Given a Binary Search Tree (BST), modify it so that all greater values in the given BST are added to every node.
+ For example, consider the following BST.
 
           50
        /      \

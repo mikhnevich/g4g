@@ -12,10 +12,11 @@ import java.util.List;
 
  For example, consider the following Binary Tree
 
-            1
-        /       \
-       2         3
-     /   \     /   \
+             1
+         /      \
+        /        \
+       2          3
+     /   \      /   \
     4     5    6    7
    /       \       /
  8         9     10

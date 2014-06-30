@@ -4,6 +4,10 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
+ * http://www.geeksforgeeks.org/find-distance-two-given-nodes/
+ *
+ * Find the distance between two keys in a binary tree, no parent pointers are given. Distance between two nodes is the minimum number of edges to be traversed to reach one node from other.
+ *
  * Created by user2 on 3/18/14.
  */
 public class DistanceBetweenKeys {

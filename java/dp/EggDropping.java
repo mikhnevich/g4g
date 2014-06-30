@@ -3,7 +3,8 @@ package dp;
 import array.ArrayUtils;
 
 /**
- * Created by sm84878 @ 4/21/2014 16:16
+ * Created @ 4/21/2014
+ * TODO add algorithm description and link
  */
 public class EggDropping {
     public static int solve(int floors, int eggs) {

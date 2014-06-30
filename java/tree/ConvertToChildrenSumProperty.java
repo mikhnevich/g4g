@@ -1,6 +1,13 @@
 package tree;
 
 /*
+
+http://www.geeksforgeeks.org/convert-an-arbitrary-binary-tree-to-a-tree-that-holds-children-sum-property/
+
+Question: Given an arbitrary binary tree, convert it to a binary tree that holds Children Sum Property (For every node, data value must be equal to sum of data values in left and right children).
+ You can only increment data values in any node (You cannot change structure of tree and cannot decrement value of any node).
+
+
 You can only increment data values in any node
 (You cannot change structure of tree and cannot decrement value of any node).
  */

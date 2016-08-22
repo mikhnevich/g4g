@@ -6,10 +6,10 @@ public class LCA {
         if (root == null) {
             return null;
         }
-        if (root.value == n1) {
+        if (root.data == n1) {
             return n1;
         }
-        if (root.value == n2) {
+        if (root.data == n2) {
             return n1;
         }
 
@@ -24,20 +24,20 @@ public class LCA {
         if (left == null) {
             return null;
         }
-        return root.value;
+        return root.data;
     }
 
     public static Integer lcaBST(Node root, int n1, int n2) {
         if (root == null) {
             return null;
         }
-        if (n1 < root.value && n2 < root.value) {
+        if (n1 < root.data && n2 < root.data) {
             return lcaBST(root.left, n1, n2);
         }
-        if (n1 > root.value && n2 > root.value) {
+        if (n1 > root.data && n2 > root.data) {
             return lcaBST(root.left, n1, n2);
         }
-        return root.value;
+        return root.data;
     }
 
     public static void main(String[] args) {

@@ -15,7 +15,7 @@ public class CheckChildrenSumProperty {
             return new Pair<>(true, 0);
         }
         if (root.left == null && root.right == null) {
-            return new Pair<>(true, root.value);
+            return new Pair<>(true, root.data);
         }
         Pair<Boolean, Integer> left = checkInternal(root.left);
         if (!left.getLeft()) {
@@ -26,8 +26,8 @@ public class CheckChildrenSumProperty {
             return new Pair<>(false, 0);
         }
         final int childrenSum = left.getRight() + right.getRight();
-        final boolean sumProperty = childrenSum == root.value;
-        return new Pair<>(sumProperty, root.value);
+        final boolean sumProperty = childrenSum == root.data;
+        return new Pair<>(sumProperty, root.data);
     }
 
 

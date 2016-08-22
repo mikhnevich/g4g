@@ -28,7 +28,7 @@ public class PrintNodesAtKdistanceFromLeaf {
                 final int idx = level - k - 1;
                 Node n = path[idx];
                 if (!printed.contains(n)) {
-                    System.out.println(n.value);
+                    System.out.println(n.data);
                     printed.add(n);
                 }
             }

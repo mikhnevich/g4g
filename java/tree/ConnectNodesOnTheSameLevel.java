@@ -25,7 +25,7 @@ package tree;
  */
 public class ConnectNodesOnTheSameLevel {
     public static void connect(Node root) {
-        root.nextRight = null;
+        root.rightSibling = null;
         connectInternal(root);
     }
 
@@ -33,27 +33,27 @@ public class ConnectNodesOnTheSameLevel {
         if (p == null) {
             return;
         }
-        if (p.nextRight != null) {
-            connectInternal(p.nextRight);
+        if (p.rightSibling != null) {
+            connectInternal(p.rightSibling);
         }
 
         if (p.left != null) {
             if (p.right != null) {
-                p.left.nextRight = p.right;
-                p.right.nextRight = getNextRight(p);
+                p.left.rightSibling = p.right;
+                p.right.rightSibling = getNextRight(p);
             } else {
-                p.left.nextRight = getNextRight(p);
+                p.left.rightSibling = getNextRight(p);
             }
             connectInternal(p.left);
         } else if (p.right != null) {
-            p.right.nextRight = getNextRight(p);
+            p.right.rightSibling = getNextRight(p);
             connectInternal(p.right);
         }
         connectInternal(getNextRight(p));
     }
 
     private static Node getNextRight(Node p) {
-        Node t = p.nextRight;
+        Node t = p.rightSibling;
         while (t != null) {
             if (t.left != null) {
                 return t.left;
@@ -61,7 +61,7 @@ public class ConnectNodesOnTheSameLevel {
             if (t.right != null) {
                 return t.right;
             }
-            t = t.nextRight;
+            t = t.rightSibling;
         }
         return null;
     }

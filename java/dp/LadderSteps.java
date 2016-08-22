@@ -2,6 +2,10 @@ package dp;
 
 import java.util.Arrays;
 
+/*
+ ladder with n steps, you can jump by 1, 2 or 3 steps.
+ How many different sequences exist to climb the ladder?
+ */
 public class LadderSteps {
 
     public int count(int N) {
@@ -47,13 +51,14 @@ public class LadderSteps {
         return cache[N % 2];
     }
 
- // use only 2 previous steps - O(1) space, O(n) time
+    // use only 2 previous steps - O(1) space, O(n) time
     // do bottom-up instead of up-bottom
     public int countTimur(int N) {
-        int f=1;
-        int f1=1;
-        for ( int j = 2; j <= N; j++) {
-            f = f+f1; f1=f-f1;
+        int f = 1;
+        int f1 = 1;
+        for (int j = 2; j <= N; j++) {
+            f = f + f1;
+            f1 = f - f1;
         }
         return f;
     }
@@ -75,7 +80,7 @@ public class LadderSteps {
 
 /*
         start = System.currentTimeMillis();
-        cnt = s.count(N);
+        cnt = s.n(N);
         time = System.currentTimeMillis() - start;
         System.out.println(cnt + ", " + time);
 */

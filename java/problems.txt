@@ -1,3 +1,13 @@
+http://www.keithschwarz.com/interesting/
+
+
+
+Scala:
+1. mutable / immutable collections
+2. custom collections
+3. for desugar
+4. repl: print types for a compiled class
+
 Tree
 1. preorder, inorder, postorder traversal
 2. level traversal
@@ -25,18 +35,28 @@ Array:
 4. 2/3/4/k sum
 5. Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
    For example: Given [0,1,0,2,1,0,1,3,2,1,2,1], return 6
+6. Given an array as input find the output array that has median of each sub array whose index starts from 0 to i(i = 1,2...array.length-1).
+   https://www.glassdoor.com/Interview/1-Finding-duplicate-entry-in-an-integer-array-Next-there-were-variations-of-this-where-I-had-to-find-duplicate-entry-only-QTN_877240.htm
+7. http://stackoverflow.com/questions/1720737/from-an-interview-removing-rows-and-columns-in-an-n%C3%97n-matrix-to-maximize-the-su
+8. Flipping columns of a matrix to get maximum benefit  ???
+9. You have two arrays with numbers in them. You have to stop the program once you've found the largest difference between one number in the 1st array and one number in the 2nd array. You do not have to return the numbers, just stop once you've found it.
+    https://www.glassdoor.com/Interview/You-have-two-arrays-with-numbers-in-them-You-have-to-stop-the-program-once-you-ve-found-the-largest-difference-between-one-QTN_918085.htm
 
 Graph:
 1. Find word in char matrix
 2. word ladder
-3.
+3. Given an entry node of an undirected graph, determine if there is an cycle in the graph
+4. Find strongly connected components in a graph (use DFS or BFS)
+5. Topo sort
 
 DP:
 1. Maximum Sum of Non-contiguous Subsequences
 2. number of unique paths, MxN grid. Solve mathematically.
 3. Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.
 4. text justification
-
+5. You have two glass bottles that will break if dropped from a specific floor between 1 and 100. Find the most efficient way to find out which floor will break the glass.
+6. min. no. of edits needed to balance a string of parentheses
+    http://www.quora.com/How-can-I-balance-parentheses-in-a-string-using-minimum-number-of-edits
 
 Heap:
 1. min/max heap implementation
@@ -49,6 +69,67 @@ General:
 2. consistent hashing
 3. bloom filter
 4. hashmap algorithm. why coprime.
+5. Given an array with successive stock prices, give an O(n) algorithm that finds the idea single buy/sell indices
+6. Given an nxn matrix of 1's and 0's, figure out if all of the 1's are connected.
+    https://www.glassdoor.com/Interview/Given-an-nxn-matrix-of-1-s-and-0-s-figure-out-if-all-of-the-1-s-are-connected-QTN_1175334.htm
+6_. Determine whether a crossword (a grid of 0s and 1s) is valid - i.e. all 1s are reachable from other 1s.
+    https://www.glassdoor.com/Interview/Determine-whether-a-crossword-a-grid-of-0s-and-1s-is-valid-i-e-all-1s-are-reachable-from-other-1s-QTN_898751.htm
+    https://www.glassdoor.com/Interview/Given-a-matrix-of-1s-and-0s-find-if-all-the-0s-are-connected-ie-can-you-flood-fill-the-area-QTN_967859.htm
+
+7. Write a function to determine whether a mathematical statement's parentheses are balanced (i.e. one right for every left, in the right order)
+    what if different type of parentheses ({[
+8. time series data???
+
+https://www.glassdoor.com/Interview/Palantir-Technologies-Interview-RVW8177518.htm
+9. Phone Interview: given a 9*9 board fill with numbers 1-9, implement a function to check if it&#039;s a valid sudoku problem
+10. Given an array, find the longest arithmetic progression
+11. Design a chess game
+12. Rotate array by k place
+13. Given a list of strings, return a list of strings which each element in the result can uniquely identify the element in the input
+
+14. Think about a board game of our choice and sketch a high level architecture design.
+
+15. https://www.glassdoor.com/Interview/We-have-strings-of-format-A-an-A-followed-by-6-spaces-that-can-be-a-number-0-9-We-also-have-regular-expressi-QTN_880823.htm
+We have strings of format A_ _ _ _ _ _ _, an A followed by 6 spaces that can be a number 0-9. We also have regular expressions with the operations "or" and "*" defined as follows:. The easiest way to illustrate this is to give an example. "A000001 or A000000" has size 2 because it matches two strings. "*" represents a wild card, so A00000* has size 10 because it matches 10 different strings, (A000000 - A000009).
+"A0* or A1*" has size 20,000 because it matches 20,000 different strings.
+The question was this:
+Write a function that takes in a number N and outputs a regular expression that matches exactly N strings of format A _ _ _ _ _ _.
+
+16. Decomposition question: How would you implement Pacman?
+
+
+List:
+1. Sorting multiple lists efficiently (whatever it means)
+
+
+String:
+1.  Find duplicates, find duplicates within distance k, find fuzzy duplicates within distance k.
 
 
 
+Running median, some follow-up of not using heaps and constant space
+Min Stack
+Find top k numbers in max heap
+Design UI for a file explorer on a webpage
+Design a Twitter API, no technical details, just discuss about it, performance, scalability, etc
+Real coding on a laptop, not hard, don't worry about it.…
+
+
+
+implement a HashMap, and then a MultiHashMap, where keys are denoted by more than one key; i.e. (<K1,K2>,V),
+implement a spell-checker, etc.).
+(suppose you have a rectangle embedded on the plane, and a disk with the points contained within the rectangle.
+If you randomly throw a fixed triangle into the rectangle, what is the probability all its endpoints are contained
+within the circle?).
+
+Suppose you have an array that's k-sorted, i.e. each element is only k indices away from its final sorted order.
+Sort this array in O(k log n) time.
+
+
+The Java challenge was to devise a representation of an NxN tic-tac-toe game board, with the variation you only need to tokens M in a row to win (in any direction), such that a win can be verified in O(1) time
+https://www.glassdoor.com/Interview/The-Java-challenge-was-to-devise-a-representation-of-an-NxN-tic-tac-toe-game-board-with-the-variation-you-only-need-to-tok-QTN_799790.htm
+
+
+
+Remove duplicates in an unsorted array where the duplicates are at a distance of k or less from each other.
+https://www.glassdoor.com/Interview/Remove-duplicates-in-an-unsorted-array-where-the-duplicates-are-at-a-distance-of-k-or-less-from-each-other-QTN_777782.htm

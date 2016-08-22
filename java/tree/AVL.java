@@ -26,9 +26,9 @@ public class AVL {
     private Node add(Node n, int value) {
         if (n == null) {
             return new Node(value);
-        } else if (value < n.value) {
+        } else if (value < n.data) {
             n.left = add(n.left, value);
-        } else if (value > n.value) {
+        } else if (value > n.data) {
             n.right = add(n.right, value);
         }
         n.height = Math.max(height(n.left), height(n.right)) + 1;
@@ -38,20 +38,20 @@ public class AVL {
 
     private Node balance(Node n, int value) {
         int balance = getBalance(n);
-        if (balance > 1 && value < n.left.value) {
+        if (balance > 1 && value < n.left.data) {
             return rightRotate(n);
         }
 
-        if (balance < -1 && value > n.right.value) {
+        if (balance < -1 && value > n.right.data) {
             return leftRotate(n);
         }
 
-        if (balance > 1 && value > n.left.value) {
+        if (balance > 1 && value > n.left.data) {
             n.left = leftRotate(n.left);
             return rightRotate(n);
         }
 
-        if (balance < -1 && value < n.right.value) {
+        if (balance < -1 && value < n.right.data) {
             n.right = rightRotate(n.right);
             return leftRotate(n);
         }
@@ -101,17 +101,17 @@ public class AVL {
     private Node remove(Node n, int value) {
         if (n == null) {
             return null;
-        } else if (value < n.value) {
+        } else if (value < n.data) {
             n.left = remove(n.left, value);
-        } else if (value > n.value) {
+        } else if (value > n.data) {
             n.right = remove(n.right, value);
         } else {
             if (n.left == null || n.right == null) {
                 n = n.left != null ? n.left : n.right;
             } else {
                 Node t = inorderSuccessor(n.right);
-                n.value = t.value;
-                n.right = remove(n.right, t.value);
+                n.data = t.data;
+                n.right = remove(n.right, t.data);
             }
         }
         if (n == null) {

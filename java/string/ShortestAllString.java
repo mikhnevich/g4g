@@ -14,7 +14,7 @@ public class ShortestAllString {
             }
         }
 
-        int n = words.size();
+        int n = words.n();
 
     }
 

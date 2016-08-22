@@ -35,7 +35,7 @@ public class NodesAtKdistanceFromNode {
         path.add(root);
         if (node == root) {
             if (k == 0) {
-                System.out.println(node.value);
+                System.out.println(node.data);
             } else {
                 final int pathSize = path.size();
                 int length = Math.min(pathSize - 1, k);
@@ -70,7 +70,7 @@ public class NodesAtKdistanceFromNode {
             return;
         }
         if (distance == 0) {
-            System.out.println(node.value);
+            System.out.println(node.data);
         } else {
             if (node.left != excluded) {
                 findAtKdistanceFrom(node.left, null, distance - 1);
@@ -95,7 +95,7 @@ public class NodesAtKdistanceFromNode {
         Node root = n1;
         for (Node node : nodes) {
             for (int i = 0; i < 10; i++) {
-                System.out.println("Node: " + node.value + ", distance: " + i);
+                System.out.println("Node: " + node.data + ", distance: " + i);
                 findNodes(root, node, i);
             }
         }

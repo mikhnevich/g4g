@@ -21,16 +21,16 @@ The approach used here is similar to method 2 of this post.
 Let the repeating numbers be X and Y, if we xor all the elements in the array and all integers from 1 to n, then the result is X xor Y.
 The 1’s in binary representation of X xor Y is corresponding to the different bits between X and Y. Suppose that the kth bit of X xor Y is 1, we can xor all the elements in the array and all integers from 1 to n, whose kth bits are 1. The result will be one of X and Y.
 
-void printRepeating(int arr[], int size)
+void printRepeating(int arr[], int n)
 {
   int xor = arr[0]; // Will hold xor of all elements
 int set_bit_no;  // Will have only single set bit of xor
     int i;
-    int n = size - 2;
+    int n = n - 2;
     int x = 0, y = 0;
 
   // Get the xor of all elements in arr[] and {1, 2 .. n}
-    for(i = 1; i < size; i++)
+    for(i = 1; i < n; i++)
     xor ^= arr[i];
     for(i = 1; i <= n; i++)
     xor ^= i;
@@ -40,7 +40,7 @@ int set_bit_no;  // Will have only single set bit of xor
 
   // Now divide elements in two sets by comparing rightmost set
   // bit of xor with bit at same position in each element.
-    for(i = 0; i < size; i++)
+    for(i = 0; i < n; i++)
     {
         if(arr[i] & set_bit_no)
             x = x ^ arr[i]; //XOR of first set in arr[]

@@ -34,8 +34,8 @@ public class AddAllGreaterValuesToBST {
             return 0;
         }
         int right = add(node.right, toAdd);
-        int oldNodeValue = node.value;
-        node.value += right + toAdd;
+        int oldNodeValue = node.data;
+        node.data += right + toAdd;
         int left = add(node.left, oldNodeValue + right + toAdd);
         return oldNodeValue + left + right;
     }

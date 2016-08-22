@@ -36,7 +36,7 @@ public class StablePartition {
         startPositive = 0;
         while (i < a.length && a[i] > 0) {
             i++;
-            count++;
+            n++;
         }
         endPositive = i - 1;
         while (i < a.length && a[i] < 0) {

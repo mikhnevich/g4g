@@ -8,7 +8,7 @@ public class TreeUtils {
         if (root == null) {
             return null;
         }
-        return new Node(root.value,
+        return new Node(root.data,
                 copy(root.left),
                 copy(root.right));
     }

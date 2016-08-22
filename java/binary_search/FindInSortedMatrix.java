@@ -1,11 +1,8 @@
 package binary_search;
 
-/**
- * Created on 3/29/2014.
- * http://www.geeksforgeeks.org/amazon-interview-set-73-for-sde-1/
- *
- * Given a matrix, sorted both horizontally and vertically, algo and code for finding an element in it
- *
+/*
+Binary search algo is not that efficient. O(log(m x n)) is not possible.
+ See http://twistedoakstudios.com/blog/Post5365_searching-a-sorted-matrix-faster
  */
 public class FindInSortedMatrix {
 }

@@ -101,16 +101,16 @@ public class ConvertToDll {
         Node c = convert(root2);
         Node t = c;
         do {
-            System.out.print(t.value);
+            System.out.print(t.data);
             System.out.print(' ');
             t = t.right;
-        } while (c.value != t.value);
+        } while (c.data != t.data);
         System.out.println();
 
         Node c2 = convert2(root2Copy);
         t = c2;
         do {
-            System.out.print(t.value);
+            System.out.print(t.data);
             System.out.print(' ');
             t = t.right;
         } while (t != null);

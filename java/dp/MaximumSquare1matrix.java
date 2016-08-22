@@ -4,7 +4,7 @@ import array.ArrayUtils;
 
 /**
  * http://www.geeksforgeeks.org/maximum-size-sub-matrix-with-all-1s-in-a-binary-matrix/
- * Given a binary matrix, find out the maximum size square sub-matrix with all 1s.
+ * Given a binary matrix, find out the maximum n square sub-matrix with all 1s.
  * <p>
  * For example, consider the below binary matrix.
  * <p>
@@ -22,7 +22,7 @@ import array.ArrayUtils;
  * 1  1  1
  *
  * Algorithm:
- Let the given binary matrix be M[R][C]. The idea of the algorithm is to construct an auxiliary size matrix S[][] in which each entry S[i][j] represents size of the square sub-matrix with all 1s including M[i][j] where M[i][j] is the rightmost and bottommost entry in sub-matrix.
+ Let the given binary matrix be M[R][C]. The idea of the algorithm is to construct an auxiliary n matrix S[][] in which each entry S[i][j] represents n of the square sub-matrix with all 1s including M[i][j] where M[i][j] is the rightmost and bottommost entry in sub-matrix.
 
  1) Construct a sum matrix S[R][C] for the given M[R][C].
  a)	Copy first row and first columns as it is from M[][] to S[][]

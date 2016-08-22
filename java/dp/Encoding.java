@@ -23,7 +23,8 @@ import java.util.List;
 public class Encoding {
 
     public static int solveRecursive(String s, char[] mapping) {
-        return solveRecursive(s, 0, mapping, new ArrayList<>());
+        return 0;
+//        return solveRecursive(s, 0, mapping, new ArrayList<>());
     }
 
     private static int solveRecursive(String s, int start, char[] mapping, List<Integer> decoded) {

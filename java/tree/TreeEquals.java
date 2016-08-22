@@ -13,7 +13,7 @@ public class TreeEquals {
         } else if (root1 == null && root2 == null) {
             return true;
         }
-        return root1.value == root2.value
+        return root1.data == root2.data
                 && treeEquals(root1.left, root2.left)
                 && treeEquals(root1.right, root2.right);
     }

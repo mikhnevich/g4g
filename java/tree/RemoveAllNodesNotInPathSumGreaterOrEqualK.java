@@ -69,7 +69,7 @@ public class RemoveAllNodesNotInPathSumGreaterOrEqualK {
         if (root == null) {
             return 0;
         }
-        sum = sum + root.value;
+        sum = sum + root.data;
         if (sum >= k) {
             return sum;
         }

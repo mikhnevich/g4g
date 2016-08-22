@@ -17,7 +17,7 @@ public class Traversal {
         if (root == null) {
             return;
         }
-        traversal.add(root.value);
+        traversal.add(root.data);
         preorder(root.left, traversal);
         preorder(root.right, traversal);
     }
@@ -29,7 +29,7 @@ public class Traversal {
         while (!q.isEmpty()) {
             Node n = q.pop();
             if (n != null) {
-                traversal.add(n.value);
+                traversal.add(n.data);
                 q.push(n.right);
                 q.push(n.left);
             }
@@ -54,7 +54,7 @@ public class Traversal {
             return;
         }
         inorder(root.left, traversal);
-        traversal.add(root.value);
+        traversal.add(root.data);
         inorder(root.right, traversal);
     }
 
@@ -71,12 +71,12 @@ public class Traversal {
                 q.push(n.left);
             } else {
                 if (!t.isEmpty()) {
-                    traversal.add(t.pop().value);
+                    traversal.add(t.pop().data);
                 }
             }
         }
         while (!t.isEmpty()) {
-            traversal.add(t.pop().value);
+            traversal.add(t.pop().data);
         }
         return Ints.toArray(traversal);
     }
@@ -91,7 +91,7 @@ public class Traversal {
                 current = current.left;
             } else {
                 Node n = q.pop();
-                traversal.add(n.value);
+                traversal.add(n.data);
                 current = n.right;
             }
         }
@@ -121,18 +121,18 @@ public class Traversal {
                     } else if (current.right != null) {
                         q.push(current.right);
                     } else {
-                        traversal.add(current.value);
+                        traversal.add(current.data);
                         q.pop();
                     }
                 } else if (previous == current.left) {
                     if (current.right == null) {
-                        traversal.add(current.value);
+                        traversal.add(current.data);
                         q.pop();
                     } else {
                         q.push(current.right);
                     }
                 } else if (previous == current.right) {
-                    traversal.add(current.value);
+                    traversal.add(current.data);
                     q.pop();
                 }
                 previous = current;
@@ -149,7 +149,7 @@ public class Traversal {
         }
         postorder(root.left, traversal);
         postorder(root.right, traversal);
-        traversal.add(root.value);
+        traversal.add(root.data);
     }
 
     public static int[] levelorder(Node root) {
@@ -159,7 +159,7 @@ public class Traversal {
             q.add(root);
             while (!q.isEmpty()) {
                 Node n = q.remove();
-                traversal.add(n.value);
+                traversal.add(n.data);
                 if (n.left != null) {
                     q.add(n.left);
                 }
@@ -189,19 +189,19 @@ public class Traversal {
         if (root != null) {
             List<Node> forward = new LinkedList<>();
             List<Node> backward = new LinkedList<>();
-            traversal.add(root.value);
+            traversal.add(root.data);
             forward.add(root.left);
             forward.add(root.right);
             while (!forward.isEmpty() || !backward.isEmpty()) {
                 for (Node n : forward) {
-                    traversal.add(n.value);
+                    traversal.add(n.data);
                     prependNonNull(backward, n.left);
                     prependNonNull(backward, n.right);
                 }
                 forward.clear();
 
                 for (Node n : backward) {
-                    traversal.add(n.value);
+                    traversal.add(n.data);
                     prependNonNull(forward, n.right);
                     prependNonNull(forward, n.left);
                 }

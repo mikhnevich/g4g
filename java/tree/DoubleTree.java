@@ -36,7 +36,7 @@ public class DoubleTree {
         if (root == null) {
             return null;
         }
-        root.left = new Node(root.value,
+        root.left = new Node(root.data,
                 doubleTree(root.left),
                 null);
         root.right = doubleTree(root.right);

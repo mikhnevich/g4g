@@ -11,7 +11,7 @@ public class MirrorTree {
         }
         Node left = mirror(root.left);
         Node right = mirror(root.right);
-        return new Node(root.value, right, left);
+        return new Node(root.data, right, left);
     }
 
     public static void main(String[] args) {

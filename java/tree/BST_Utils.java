@@ -46,7 +46,10 @@ public class BST_Utils {
         List<Node> newNodes = new ArrayList<Node>();
         for (Node node : nodes) {
             if (node != null) {
-                System.out.print(node.value);
+                System.out.print(node.data);
+                if (node.rightSibling != null) {
+                    System.out.print("(" + node.rightSibling.data + ")");
+                }
                 newNodes.add(node.left);
                 newNodes.add(node.right);
             } else {

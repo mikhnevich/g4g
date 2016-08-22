@@ -6,7 +6,7 @@ import array.ArrayUtils;
  * Created on 3/28/2014.
  * http://www.geeksforgeeks.org/dynamic-programming-set-5-edit-distance/
  *
- * Problem: Given two strings of size m, n and set of operations replace (R), insert (I) and delete (D) all at equal cost. Find minimum number of edits (operations) required to convert one string into another.
+ * Problem: Given two strings of n m, n and set of operations replace (R), insert (I) and delete (D) all at equal cost. Find minimum number of edits (operations) required to convert one string into another.
  *
  */
 public class EditDistance {

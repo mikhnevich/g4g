@@ -9,7 +9,7 @@ public class Node {
         Black
     }
 
-    int value;
+    int data;
     Node left;
     Node right;
 
@@ -20,14 +20,14 @@ public class Node {
     Color color = Color.Red;
     Node p;
 
-    Node nextRight;
+    Node rightSibling;
 
-    public Node(int value) {
-        this.value = value;
+    public Node(int data) {
+        this.data = data;
     }
 
-    public Node(int value, Node left, Node right) {
-        this(value);
+    public Node(int data, Node left, Node right) {
+        this(data);
         this.left = left;
         this.right = right;
     }
@@ -35,7 +35,7 @@ public class Node {
     @Override
     public String toString() {
         return "Node{" +
-                "value=" + value +
+                "data=" + data +
                 ", height=" + height +
                 ", color=" + color +
                 '}';

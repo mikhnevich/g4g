@@ -26,6 +26,39 @@ public class LongestCommonSubsequence {
         return lcs(st1, st2, S);
     }
 
+    public static String lcs2(String s1, String s2) {
+        int[][] c = new int[s1.length() + 1][s2.length() + 1];
+        for (int i = 1; i <= s1.length(); i++) {
+            for (int j = 1; j <= s2.length(); j++) {
+                if (s1.charAt(i-1) == s2.charAt(j-1)) {
+                    c[i][j] = c[i-1][j-1] + 1;
+                } else if (c[i-1][j] < c[i][j-1]) {
+                    c[i][j] = c[i][j-1];
+                } else {
+                    c[i][j] = c[i-1][j];
+                }
+            }
+        }
+        int max = c[s1.length()][s2.length()];
+        int i = s1.length();
+        int j = s2.length();
+        String result = "";
+        while (i > 0 && j > 0) {
+            if (s1.charAt(i-1) == s2.charAt(j-1)) {
+                result = s1.charAt(i-1) + result;
+                i--;
+                j--;
+            } else {
+                if (c[i-1][j] < c[i][j-1]) {
+                    j--;
+                } else {
+                    i--;
+                }
+            }
+        }
+        return result;
+    }
+
     private static int lcs(String st1, String st2, int[][] S) {
         int st1L = st1.length();
         int st2L = st2.length();

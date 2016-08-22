@@ -25,7 +25,7 @@ public class RedBlackTree {
 
         while (x != NIL) {
             y = x;
-            if (value < x.value) {
+            if (value < x.data) {
                 x = x.left;
             } else {
                 x = x.right; // no duplicate check!!!
@@ -35,7 +35,7 @@ public class RedBlackTree {
         z.p = y;
         if (y == NIL) {
             root = z;
-        } else if (value < y.value) {
+        } else if (value < y.data) {
             y.left = z;
         } else {
             y.right = z;
@@ -92,9 +92,9 @@ public class RedBlackTree {
     private Node add(Node root, int value) {
         if (root == null) {
             return new Node(value);
-        } else if (value < root.value) {
+        } else if (value < root.data) {
             root.left = add(root.left, value);
-        } else if (value > root.value) {
+        } else if (value > root.data) {
             root.right = add(root.right, value);
         }
         return root;

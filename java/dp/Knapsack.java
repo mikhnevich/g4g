@@ -26,13 +26,13 @@ public class Knapsack {
     public static int solveDP(int[] value, int[] weight, int capacity) {
         int[][] S = new int[capacity + 1][value.length + 1];
         for (int j = 1; j <= value.length; j++) {
-            for (int i = 1; i <= capacity; i++) {
-                if (weight[j - 1] > i) {
-                    S[i][j] = S[i][j - 1];
+            for (int w = 1; w <= capacity; w++) {
+                if (weight[j - 1] > w) {
+                    S[w][j] = S[w][j - 1];
                 } else {
-                    S[i][j] = Math.max(
-                            S[i][j - 1],
-                            S[i - weight[j - 1]][j - 1] + value[j - 1]
+                    S[w][j] = Math.max(
+                            S[w][j - 1],
+                            S[w - weight[j - 1]][j - 1] + value[j - 1]
                     );
                 }
             }
@@ -64,8 +64,7 @@ public class Knapsack {
         } else {
             final int v1 = value[n] + solveRecursive(n - 1, value, weight, capacity - weight[n]);
             final int v2 = solveRecursive(n - 1, value, weight, capacity);
-            return Math.max(v1, v2
-            );
+            return Math.max(v1, v2);
         }
     }
 

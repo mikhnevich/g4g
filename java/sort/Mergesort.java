@@ -38,6 +38,7 @@ public class Mergesort {
             }
             current++;
         }
+        // no need to copy right part - as it's already in "array"
         while (hL <= mid) {
             array[current] = helper[hL];
             hL++;

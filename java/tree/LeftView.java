@@ -30,7 +30,7 @@ public class LeftView {
         int maxLevelPrinted = levelPrinted;
         if (level > maxLevelPrinted) {
             maxLevelPrinted = level;
-            System.out.print(root.value);
+            System.out.print(root.data);
             System.out.print(' ');
         }
         maxLevelPrinted = leftView(root.left, level + 1, maxLevelPrinted);

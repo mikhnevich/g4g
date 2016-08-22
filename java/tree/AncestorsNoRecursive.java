@@ -47,7 +47,7 @@ public class AncestorsNoRecursive {
         q.add(root);
         while (!q.isEmpty()) {
             Node n = q.remove(0);
-            if (n.value == value) {
+            if (n.data == value) {
 //                printNodes(path);
                 return;
             }
@@ -59,7 +59,7 @@ public class AncestorsNoRecursive {
         if (root == null) {
             return 0;
         }
-        sum = sum + root.value;
+        sum = sum + root.data;
         if (sum >= k) {
             return sum;
         }

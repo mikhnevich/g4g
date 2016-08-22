@@ -121,7 +121,7 @@ public class RadixTreeImpl<T> implements RadixTree<T>, Formattable {
      *
      * @param key The key to be inserted
      * @param node The current node
-     * @param value The value associated with the key
+     * @param value The data associated with the key
      * @throws DuplicateKeyException If the key already exists in the database.
      */
     private void insert(String key, RadixTreeNode<T> node, T value)

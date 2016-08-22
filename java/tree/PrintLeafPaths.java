@@ -16,7 +16,7 @@ public class PrintLeafPaths {
         if (root == null) {
             if (!printed.get(path.size() - 1)) {
                 for (Node node : path) {
-                    System.out.print(node.value + ", ");
+                    System.out.print(node.data + ", ");
                 }
                 System.out.println();
                 printed.set(path.size() - 1, true);

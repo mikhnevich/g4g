@@ -5,13 +5,13 @@ package trie;
  */
 public class RadixTree<T> {
 /*    RadixTreeNode<T> root;
-    int size;
+    int n;
 
     public RadixTree() {
         root = new RadixTreeNode<>();
         root.key = "";
         root.real = false;
-        size = 0;
+        n = 0;
     }
 
     public void insert(String key, T value) throws DuplicateKeyException {

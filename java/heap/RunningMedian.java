@@ -9,8 +9,12 @@ package heap;
  After reading 2nd element of stream - 5, 15 -> median - 10
  After reading 3rd element of stream - 5, 15, 1 -> median - 5
  After reading 4th element of stream - 5, 15, 1, 3 -> median - 4, so on...
- Making it clear, when the input size is odd, we take the middle element of sorted data. If the input size is even, we pick average of middle two elements in sorted stream.
+ Making it clear, when the input n is odd, we take the middle element of sorted data.
+ If the input n is even, we pick average of middle two elements in sorted stream.
 
  */
 public class RunningMedian {
+    // Minheap and maxheap
+    // min element in minheap > max element in maxheap.
+    // keep their size == (+-1)
 }

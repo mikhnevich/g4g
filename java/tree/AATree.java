@@ -27,6 +27,7 @@ public class AATree {
             return "(" + value + ", " + level + ')';
         }
     }
+
     /*
 
          d,2               b,2
@@ -38,8 +39,8 @@ public class AATree {
      */
     public static Node skew(Node root) {
         Node r = root;
-        if (root.level != 0) {
-            if (root.level == root.left.level) {
+        if (r.level != 0) {
+            if (r.level == r.left.level) {
                 Node tmp = root;
                 r = root.right;
                 tmp.left = r.right;
@@ -68,7 +69,6 @@ public class AATree {
                 r.level = r.level + 1;
                 tmp.right = r.left;
                 r.left = tmp;
-                r.right = split(r.right);
             }
         }
         return r;
@@ -99,7 +99,12 @@ public class AATree {
                 r.right = delete(r.right, value);
             } else {
                 if (r.left != Nil && r.right != Nil) {
-                    
+                    Node heir = r.left;
+                    while (heir.right != Nil) {
+                        heir = heir.right;
+                    }
+                    root.value = heir.value;
+                    root.left = delete(root.left, heir.value);
                 } else if (r.left == Nil) {
                     r = r.right;
                 } else {
@@ -107,12 +112,20 @@ public class AATree {
                 }
             }
         }
+        if (r.left.level < r.level - 1 || root.right.level < r.level - 1) {
+            r.level--;
+            if (r.right.level > r.level) {
+                r.right.level = r.level;
+            }
+            r = skew(r);
+            r = split(r);
+        }
         return r;
     }
 
     public static void main(String[] args) {
         Node r = Nil;
-        for (int i = 0; i <=6; i++) {
+        for (int i = 0; i <= 6; i++) {
             r = insert(r, i);
             System.out.println(r);
         }

@@ -5,7 +5,7 @@ package array;
  *
  * http://www.geeksforgeeks.org/counting-inversions/
  *
- * Inversion Count for an array indicates – how far (or close) the array is from being sorted. If array is already sorted then inversion n is 0. If array is sorted in reverse order that inversion n is the maximum.
+ * Inversion Count for an array indicates – how far (or close) the array is from being sorted. If array is already sorted then inversion node is 0. If array is sorted in reverse order that inversion node is the maximum.
  Formally speaking, two elements a[i] and a[j] form an inversion if a[i] > a[j] and i < j
 
  Example:

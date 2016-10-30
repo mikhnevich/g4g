@@ -2,9 +2,9 @@
 2. consistent hashing
 
 2. float to string
-4. To prove that the time complexity of inserting n elements in a heap.
+4. To prove that the time complexity of inserting node elements in a heap.
 5. Implement LRU
-6. combinatorics: Given a matrix (m*n), source (0, 0) & destination (m-1, n-1) (i.e. last cell), Find out total number of ways to reach the destination from the source.
+6. combinatorics: Given a matrix (m*node), source (0, 0) & destination (m-1, node-1) (i.e. last cell), Find out total number of ways to reach the destination from the source.
 8. combinatorics. 3 of N, etc
 9. Given a string, find the longest substring which is palindrome. For example, if the given string is “forgeeksskeegfor”, the output should be “geeksskeeg”.
 10. KMP pattern matching
@@ -40,13 +40,13 @@
     http://www.geeksforgeeks.org/median-of-two-sorted-arrays-of-different-sizes/
 40. Median of N sorted arrays.
 41. heap
-42. Given array of N integers ranging from 0 to N-1. Output maximum repeating integer. Use only O(1) memory. For i = 0 to N-1, A[A[i]%N] += N. Return i with max A[i]. O(n) time.
+42. Given array of N integers ranging from 0 to N-1. Output maximum repeating integer. Use only O(1) memory. For i = 0 to N-1, A[A[i]%N] += N. Return i with max A[i]. O(node) time.
 43. Find your own method to balance an unbalanced binary tree.(you must not use existing methods like AVL, red black or b trees).
     Hint: There is no restriction on placing nodes. You can remove any node from any place and put it in any place.
     I devised an algorithm which will make use of two lists. One list contains nodes far away from the root and this is sorted in decreasing order of levels and left to right if nodes are in same level. Other list contains nodes which are not fully filled. This is sorted increasing order of levels and left to right if nodes are in same level .
-    Remove the first node (listed in list1) and insert as a child of first node in list2.add this node also in list 2. Do this operation until the height of the tree becomes log(n). Interviewer was impressed with this and finished the interview.
-44. Find min and max element of an unsorted integer array in O((n/2)*3)
-45. LCA of K given nodes in a n-ary tree
+    Remove the first node (listed in list1) and insert as a child of first node in list2.add this node also in list 2. Do this operation until the height of the tree becomes log(node). Interviewer was impressed with this and finished the interview.
+44. Find min and max element of an unsorted integer array in O((node/2)*3)
+45. LCA of K given nodes in a node-ary tree
 46. Sliding window minimum
 47. hashing function
 48. Implement 2 stacks in an array. What if want change size dynamically. 3 stacks. K stacks.
@@ -62,9 +62,9 @@
 58. Convert a given number to Roman numbers. Vice versa.
 59. Check if a tree is a subtree of another.
 60. You are given an array in which you’ve to find a subarray such that the sum of elements in it is equal to zero.
-    time complexity is O(n) and space complexity is O(n)
+    time complexity is O(node) and space complexity is O(node)
 
-    hash the sum from 0 to i for all array elements, i.e sum[i] = sum of all elements from a[0] to a[i] and corresponding index as data to key (starting from -1 to n)
+    hash the sum from 0 to i for all array elements, i.e sum[i] = sum of all elements from a[0] to a[i] and corresponding index as data to key (starting from -1 to node)
 
     ex: 2 3 -4 9 -1 -7 -5 6 5
 
@@ -79,7 +79,7 @@
     ------------
     Found in Stackoverflow:
 
-    This algorithm will find all subarrays with sum 0 and it can be easily modified to find the minimal one or to keep track of the start and end indexes. This algorithm is O(n).
+    This algorithm will find all subarrays with sum 0 and it can be easily modified to find the minimal one or to keep track of the start and end indexes. This algorithm is O(node).
 
     Given an int[] input array, you can create an int[] tmp array where tmp[i] = tmp[i - 1] + input[i]; Each element of tmp will store the sum of the input up to that element.
 
@@ -107,7 +107,7 @@
 
     [0] [0-2] [0-3] [1-2] [1-3] [3]
 
-    Although the presence of multiple entries with the same data might impact the complexity of the algorithm depending on the implementation, I believe that by using an inverted index on tmp (mapping a data to the indexes where it appears) we can keep the running time at O(n).
+    Although the presence of multiple entries with the same data might impact the complexity of the algorithm depending on the implementation, I believe that by using an inverted index on tmp (mapping a data to the indexes where it appears) we can keep the running time at O(node).
 
 61. A skeleton of a binary tree with nodes having garbage values is given and an array is given. Had to fill up the binary tree skeleton with the values in array such that the resulting tree is a BST.
     Solution: sort the array, enter the values in an in-order fashion
@@ -170,7 +170,7 @@
     c) Updating the segment tree
     He asked me to analyze the time complexity for building the segment tree and performing the range minimum query in the segment tree.
     He then asked me: If you are to maintain the stock data of a company for the past 6 months..then you have to update the segment tree every day by deleting a stock data and inserting a new stock data. How would you do that?
-    Here I got stuck and could not perform the updation in better than O(n) time.(However using queue it can be performed in O(1) time)
+    Here I got stuck and could not perform the updation in better than O(node) time.(However using queue it can be performed in O(1) time)
 72. Persistent data structures. http://courses.csail.mit.edu/6.854/06/scribe/s2-persistent.pdf  http://www.cs.cmu.edu/~sleator/papers/another-persistence.pdf
 73. store/read binary tree
 74. An array of integers is given, find all the ranges present in the array.
@@ -199,9 +199,9 @@
 95. Given an array of numbers, find the minimum data of the absolute difference that can be obtained from any pair of numbers from the array.
 96. You are given an array whose each element represents the height of the tower. The width of every tower is 1. It starts raining. How much water is collected between the towers?
     Eg. [1,5,3,7,2] – then answer is 2 units between towers 5 and 7.
-97. What is a height balanced tree. Give an O(n) solution to balance it. Then he changed the definition of a balanced tree as- a tree is balanced if every node in a particular level should have the same number of descendants (and not only direct children). And every node can have any number of children. I had to design the class and then write the code for it.
+97. What is a height balanced tree. Give an O(node) solution to balance it. Then he changed the definition of a balanced tree as- a tree is balanced if every node in a particular level should have the same number of descendants (and not only direct children). And every node can have any number of children. I had to design the class and then write the code for it.
 98. Given an array of integers, find an index such that if you split the array into two parts the absolute data of the difference between the sum of elements in both parts had to be minimum. After giving him the logic, he changed it to split it into 3 parts such that sum of elements in all of them are equal. I had to code this one.
-99. http://stackoverflow.com/questions/731832/interview-question-ffn-n/731857#731857
+99. http://stackoverflow.com/questions/731832/interview-question-ffn-node/731857#731857
 100. http://stackoverflow.com/questions/1132350/recursion-cut-array-of-integers-in-two-parts-of-equal-sum-in-a-single-pass
 101. http://people.cs.clemson.edu/~bcdean/dp_practice/
 102. max contig sum (+- values)
@@ -210,11 +210,11 @@
      n2 pairs of “[] ” brackets
      n3 pairs of “() ” brackets
      I have to find the all valid combinations of all the pairs.
-105. Given an array of n numbers with repetition of numbers. You need to find the max length of continuous sub array with at max 3 unique elements.
+105. Given an array of node numbers with repetition of numbers. You need to find the max length of continuous sub array with at max 3 unique elements.
      For eg
      array: 1 2 3 1 4 3 4 1 2
      ans: 6 (3 1 4 3 4 1)
-     Solution: Time complexity O(n)
+     Solution: Time complexity O(node)
      Extra Space O(1)
 106. Suppose u given normal deck of cards 4 suites and 13 cards of each suite in which one card is missing
      you are picking a card one at a time and sees that card and putting it aside

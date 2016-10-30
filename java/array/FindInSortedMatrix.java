@@ -4,7 +4,7 @@ package array;
  * Created @ 4/28/2014
  * http://leetcode.com/2010/10/searching-2d-sorted-matrix-part-ii.html
  * <p>
- * Write an efficient algorithm that searches for a value in an n x m table (two-dimensional array). This table is sorted along the rows and columns — that is,
+ * Write an efficient algorithm that searches for a value in an node x m table (two-dimensional array). This table is sorted along the rows and columns — that is,
  * <p>
  * Table[i][j] ≤ Table[i][j + 1],
  * Table[i][j] ≤ Table[i + 1][j]
@@ -17,7 +17,7 @@ public class FindInSortedMatrix {
     // right corner (or the bottom left corner). Instead of traversing diagonally each step, we traverse one step to
     // the left or bottom. Essentially, each step we are able to eliminate either a row or a column. The worst case
     // scenario is where it ended up in the opposite corner of the matrix, which takes at most 2n steps.
-    // Therefore, this algorithm runs in O(n) time, which is better than previous approaches.
+    // Therefore, this algorithm runs in O(node) time, which is better than previous approaches.
     public static boolean find(int[][] a, int value) {
         int m = a.length;
         int n = a[0].length;

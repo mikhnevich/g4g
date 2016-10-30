@@ -3,7 +3,7 @@ package array;
 // https://www.careercup.com/question?id=12708671
 /*
 You are given an unsorted array with both positive and negative elements. You have to find the smallest positive
-number missing from the array in O(n) time using constant extra space.
+number missing from the array in O(node) time using constant extra space.
 Eg:
 Input = {2, 3, 7, 6, 8, -1, -10, 15}
 Output = 1

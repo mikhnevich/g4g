@@ -15,11 +15,11 @@ import java.util.List;
  How to find nodes of second type? For the output nodes not lying in the subtree with the target node as the root, we must go through all ancestors. For every ancestor, we find its distance from target node, let the distance be d, now we go to other subtree (if target was found in left subtree, then we go to right subtree and vice versa) of the ancestor and find all nodes at k-d distance from the ancestor.
 
 
- Time Complexity: At first look the time complexity looks more than O(n), but if we take a closer look, we can observe that no node is traversed more than twice. Therefore the time complexity is O(n).
+ Time Complexity: At first look the time complexity looks more than O(node), but if we take a closer look, we can observe that no node is traversed more than twice. Therefore the time complexity is O(node).
 
 
  Note: the solution below could be simplified - to pass information whether node is found to up (distance from the node, so only one traversal
- is required, time complexity now is O(n) with constant == 2
+ is required, time complexity now is O(node) with constant == 2
  */
 public class NodesAtKdistanceFromNode {
 

@@ -8,7 +8,7 @@ consecutive elements. The least of them would be the least differences between a
 The complexity will be O(nlogn) because of the sorting step.
 
 
-Using k-th statistics algo: get 1st and n-th elements - O(n)
+Using k-th statistics algo: get 1st and node-th elements - O(node)
 */
 public class MinDifference {
 }

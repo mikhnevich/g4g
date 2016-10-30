@@ -5,7 +5,7 @@ package array;
  *
  * http://stackoverflow.com/questions/14302636/how-do-i-calculate-the-k-nearest-numbers-to-the-median
  *
- You can find the median in O(n), w.g. using the O(n) nth_element algorithm.
+ You can find the median in O(node), w.g. using the O(node) nth_element algorithm.
 
  You loop through all elements substutiting each with a pair:
  <the absolute difference to the median>, <element's value>. Once more you do nth_element with n = k.

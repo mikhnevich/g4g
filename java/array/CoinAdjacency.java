@@ -29,7 +29,7 @@ public class CoinAdjacency {
                 else
                     count = count - 1;
             }
-            System.out.println("n: " + count);
+            System.out.println("node: " + count);
             r = Math.max(r, count);
         }
         System.out.println("Final result: " + (result + r));

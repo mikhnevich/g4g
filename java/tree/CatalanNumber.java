@@ -2,7 +2,7 @@ package tree;
 
 /**
  * http://www.geeksforgeeks.org/g-fact-18/
- * Total number of possible Binary Search Trees with n different keys = Catalan number Cn = (2n)!/(n+1)!*n!
+ * Total number of possible Binary Search Trees with node different keys = Catalan number Cn = (2n)!/(node+1)!*node!
  */
 public class CatalanNumber {
 
@@ -12,7 +12,7 @@ public class CatalanNumber {
         }
         int total = 0;
         for (int i = 0; i < n; i++) {
-//            System.out.println("recursion " + i + ", " + (n - i - 1));
+//            System.out.println("recursion " + i + ", " + (node - i - 1));
             total += catalan(i) * catalan(n - i - 1);
         }
         return total;

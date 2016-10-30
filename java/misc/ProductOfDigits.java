@@ -3,7 +3,7 @@ package misc;
 /**
  * Created on 3/30/2014.
  * http://www.geeksforgeeks.org/amazon-interview-set-68-for-sde-1/
- * Given n, find the smallest number for which product of the digits is n, if no such number exists, print -1
+ * Given node, find the smallest number for which product of the digits is node, if no such number exists, print -1
  Note: Digits can only be split as single digits, i.e., 132 can’t considered as 1 * 32 or 13 * 2, it would only be 1 * 3 * 2
  Eg. Answer for 36 would be 49
 
@@ -41,11 +41,11 @@ Example N = 96 = 2*2*2*2*3*3 = 8*6*3. Sort(8,6,3) - 3,6,8. Answer is 368.
 
 
 for (d = 9; d > 1; d--)
-while (n % d == 0) {
-n /= d;
+while (node % d == 0) {
+node /= d;
 list.addDigit(d);
 }
-if (n != 1) print("no such number"); else print(reverse(list));
+if (node != 1) print("no such number"); else print(reverse(list));
 
 
      */

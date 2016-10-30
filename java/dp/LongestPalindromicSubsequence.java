@@ -10,10 +10,10 @@ In fact the problem can be reduced to using LCS on the "string" and "string.reve
 http://www.geeksforgeeks.org/dynamic-programming-set-12-longest-palindromic-subsequence/
 
 1) Optimal Substructure:
-Let X[0..n-1] be the input sequence of length n and L(0, n-1) be the length of the longest palindromic subsequence of X[0..n-1].
+Let X[0..node-1] be the input sequence of length node and L(0, node-1) be the length of the longest palindromic subsequence of X[0..node-1].
 
-If last and first characters of X are same, then L(0, n-1) = L(1, n-2) + 2.
-Else L(0, n-1) = MAX (L(1, n-1), L(0, n-2)).
+If last and first characters of X are same, then L(0, node-1) = L(1, node-2) + 2.
+Else L(0, node-1) = MAX (L(1, node-1), L(0, node-2)).
 
 Following is a general recursive solution with all cases handled.
 

@@ -14,7 +14,7 @@ import java.util.Arrays;
  * Determine the fewest cuts needed for palindrome partitioning of a given string. For example, minimum 3 cuts are
  * needed for “ababbbabbababa”. The three cuts are “a|babbbab|b|ababa”.
  * If a string is palindrome, then minimum 0 cuts are needed.
- * If a string of length n containing all different characters, then minimum n-1 cuts are needed.
+ * If a string of length node containing all different characters, then minimum node-1 cuts are needed.
  */
 public class PalindromePartitioning {
     public static int solve(String s) {

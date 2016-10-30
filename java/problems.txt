@@ -1,3 +1,5 @@
+http://massivealgorithms.blogspot.com/2016/10/leetcode-444-sequence-reconstruction.html
+http://massivealgorithms.blogspot.com/2016/10/leetcode-438-find-all-anagrams-in-string.html
 http://www.keithschwarz.com/interesting/
 
 
@@ -33,11 +35,11 @@ Array:
 2. ascending minima/maxima
 3. inversions count
 4. 2/3/4/k sum
-5. Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
+5. Given node non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
    For example: Given [0,1,0,2,1,0,1,3,2,1,2,1], return 6
 6. Given an array as input find the output array that has median of each sub array whose index starts from 0 to i(i = 1,2...array.length-1).
    https://www.glassdoor.com/Interview/1-Finding-duplicate-entry-in-an-integer-array-Next-there-were-variations-of-this-where-I-had-to-find-duplicate-entry-only-QTN_877240.htm
-7. http://stackoverflow.com/questions/1720737/from-an-interview-removing-rows-and-columns-in-an-n%C3%97n-matrix-to-maximize-the-su
+7. http://stackoverflow.com/questions/1720737/from-an-interview-removing-rows-and-columns-in-an-node%C3%97n-matrix-to-maximize-the-su
 8. Flipping columns of a matrix to get maximum benefit  ???
 9. You have two arrays with numbers in them. You have to stop the program once you've found the largest difference between one number in the 1st array and one number in the 2nd array. You do not have to return the numbers, just stop once you've found it.
     https://www.glassdoor.com/Interview/You-have-two-arrays-with-numbers-in-them-You-have-to-stop-the-program-once-you-ve-found-the-largest-difference-between-one-QTN_918085.htm
@@ -69,7 +71,7 @@ General:
 2. consistent hashing
 3. bloom filter
 4. hashmap algorithm. why coprime.
-5. Given an array with successive stock prices, give an O(n) algorithm that finds the idea single buy/sell indices
+5. Given an array with successive stock prices, give an O(node) algorithm that finds the idea single buy/sell indices
 6. Given an nxn matrix of 1's and 0's, figure out if all of the 1's are connected.
     https://www.glassdoor.com/Interview/Given-an-nxn-matrix-of-1-s-and-0-s-figure-out-if-all-of-the-1-s-are-connected-QTN_1175334.htm
 6_. Determine whether a crossword (a grid of 0s and 1s) is valid - i.e. all 1s are reachable from other 1s.
@@ -123,7 +125,7 @@ If you randomly throw a fixed triangle into the rectangle, what is the probabili
 within the circle?).
 
 Suppose you have an array that's k-sorted, i.e. each element is only k indices away from its final sorted order.
-Sort this array in O(k log n) time.
+Sort this array in O(k log node) time.
 
 
 The Java challenge was to devise a representation of an NxN tic-tac-toe game board, with the variation you only need to tokens M in a row to win (in any direction), such that a win can be verified in O(1) time

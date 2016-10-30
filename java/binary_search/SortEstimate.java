@@ -5,8 +5,8 @@ package binary_search;
  */
 public class SortEstimate {
     public static double howMany(int c, int time) {
-        // You have implemented a sorting algorithm that requires exactly c*n*lg(n) nanoseconds to sort n integers.
-        // Here lg denotes the base-2 logarithm. Given time nanoseconds, return the largest double n such that c*n*lg(n) <= time.
+        // You have implemented a sorting algorithm that requires exactly c*node*lg(node) nanoseconds to sort node integers.
+        // Here lg denotes the base-2 logarithm. Given time nanoseconds, return the largest double node such that c*node*lg(node) <= time.
         // Your return value must have a relative or absolute error less than 1e-9.
 
         double lo = 0;

@@ -6,13 +6,13 @@ import array.ArrayUtils;
 http://www.geeksforgeeks.org/longest-palindrome-substring-set-1/
 
 The time complexity can be reduced by storing results of subproblems. The idea is similar to this post.
-We maintain a boolean table[n][n] that is filled in bottom up manner. The value of table[i][j] is true,
+We maintain a boolean table[node][node] that is filled in bottom up manner. The value of table[i][j] is true,
 if the substring is palindrome, otherwise false. To calculate table[i][j], we first check the value of
 table[i+1][j-1], if the value is true and str[i] is same as str[j], then we make table[i][j] true.
 Otherwise, the value of table[i][j] is made false.
-O(n^2) time and space.
+O(node^2) time and space.
 
-O(n^2) time and O(1) space:
+O(node^2) time and O(1) space:
 The idea is to generate all even length and odd length palindromes and keep track of the longest palindrome seen so far.
 Step to generate odd length palindrome:
 Fix a centre and expand in both directions for longer palindromes.

@@ -350,9 +350,9 @@ public class RadixTreeImpl<T> implements RadixTree<T>, Formattable {
         }
 
         if (node.isReal() == true)
-            f.format("%s[%s]*%n", node.getKey(),  node.getValue());
+            f.format("%s[%s]*%node", node.getKey(),  node.getValue());
         else
-            f.format("%s%n", node.getKey());
+            f.format("%s%node", node.getKey());
 
         for (RadixTreeNode<T> child : node.getChildern()) {
             formatNodeTo(f, level + 1, child);

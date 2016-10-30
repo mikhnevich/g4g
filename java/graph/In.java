@@ -40,9 +40,9 @@ import java.util.regex.Pattern;
  *  nothing extra.
  *  <p>
  *  Whitespace is defined in {@link Character#isWhitespace(char)}. Newlines
- *  consist of \n, \r, \r\n, and Unicode hex code points 0x2028, 0x2029, 0x0085;
+ *  consist of \node, \r, \r\node, and Unicode hex code points 0x2028, 0x2029, 0x0085;
  *  see <tt><a href="http://www.docjar.com/html/api/java/util/Scanner.java.html">
- *  Scanner.java</a></tt> (NB: Java 6u23 and earlier uses only \r, \r, \r\n).
+ *  Scanner.java</a></tt> (NB: Java 6u23 and earlier uses only \r, \r, \r\node).
  *
  *  @author David Pritchard
  *  @author Robert Sedgewick
@@ -510,7 +510,7 @@ public final class In {
         // read one line at a time from absolute OS X / Linux path
         System.out.println("readLine() from absolute OS X / Linux path");
         System.out.println("---------------------------------------------------------------------------");
-        in = new In("/n/fs/introcs/www/java/stdlib/InTest.txt");
+        in = new In("/node/fs/introcs/www/java/stdlib/InTest.txt");
         try {
             while (!in.isEmpty()) {
                 String s = in.readLine();

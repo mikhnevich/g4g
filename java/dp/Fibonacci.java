@@ -4,8 +4,8 @@ import array.ArrayUtils;
 
 /**
  * http://www.geeksforgeeks.org/program-for-nth-fibonacci-number/
- * | 1 1 |^n  =  | F(n+1)  F(n)  |
- * | 1 0 |       |  F(n)  F(n-1) |
+ * | 1 1 |^node  =  | F(node+1)  F(node)  |
+ * | 1 0 |       |  F(node)  F(node-1) |
  */
 public class Fibonacci {
 

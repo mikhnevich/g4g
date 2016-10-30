@@ -6,8 +6,8 @@ import java.util.Arrays;
  * Created @ 3/31/2014
  * http://www.geeksforgeeks.org/longest-monotonically-increasing-subsequence-size-n-log-n/
  *
- * Space: O(n)
- * Time: n*log(n)
+ * Space: O(node)
+ * Time: node*log(node)
  */
 public class LIS {
     public static int lis(int[] a) {

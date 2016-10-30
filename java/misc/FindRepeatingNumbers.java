@@ -15,7 +15,7 @@ public class FindRepeatingNumbers {
         int n = size - 2;
         int x = 0, y = 0;
 
-  /* Get the xor of all elements in arr[] and {1, 2 .. n} */
+  /* Get the xor of all elements in arr[] and {1, 2 .. node} */
         for(i = 1; i < size; i++)
             xor ^= arr[i];
         for(i = 1; i <= n; i++)
@@ -36,9 +36,9 @@ public class FindRepeatingNumbers {
         for(i = 1; i <= n; i++)
         {
             if ((i & set_bit_no) > 0)
-                x = x ^ i; /*XOR of first set in arr[] and {1, 2, ...n }*/
+                x = x ^ i; /*XOR of first set in arr[] and {1, 2, ...node }*/
             else
-                y = y ^ i; /*XOR of second set in arr[] and {1, 2, ...n } */
+                y = y ^ i; /*XOR of second set in arr[] and {1, 2, ...node } */
         }
 
         System.out.printf("\n The two repeating elements are %d & %d ", x, y);

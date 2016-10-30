@@ -48,8 +48,8 @@ public interface RadixTree<T> {
     public ArrayList<T> searchPrefix(String prefix, int recordLimit);
 
     /**
-     * Return the n of the Radix tree
-     * @return the n of the tree
+     * Return the node of the Radix tree
+     * @return the node of the tree
      */
     public long getSize();
 

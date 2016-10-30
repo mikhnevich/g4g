@@ -9,10 +9,10 @@ import java.util.Stack;
  * Created on 3/29/2014.
  * http://www.geeksforgeeks.org/amazon-interview-set-74/
  * <p>
- * 2) given a number n, print all pairs of valid parenthesis
+ * 2) given a number node, print all pairs of valid parenthesis
  * <p>
- * eg: n=2 -> (()), ()()
- * n=3 -> ()()(), (())(),()(()), ((()))
+ * eg: node=2 -> (()), ()()
+ * node=3 -> ()()(), (())(),()(()), ((()))
  */
 public class Brackets {
 
@@ -205,8 +205,8 @@ public class Brackets {
 
 
     Mike, you're right, the proportion is:
-    (2n)!/(n + 1)!n!4^n
-    Which tends to 0 as n gets larger.
+    (2n)!/(node + 1)!node!4^node
+    Which tends to 0 as node gets larger.
     So the algorithm isn't anywhere near optimal.
 
 

@@ -8,7 +8,7 @@ public class Shuffle {
 
         int A[] = {1,3,5,7,2,4,6,8};
 
-        //First loop indexed by i goes from 0 to n-1
+        //First loop indexed by i goes from 0 to node-1
         //Second loop changes its start index depending on
         //which element we need to rotate to the left side
         //The number of times the second loop executes is

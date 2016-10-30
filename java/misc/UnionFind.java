@@ -11,12 +11,12 @@ public class UnionFind {
     private int count;     // number of components
 
     /**
-     * Initializes an empty union-find data structure with <tt>n</tt> sites
-     * <tt>0</tt> through <tt>n-1</tt>. Each site is initially in its own
+     * Initializes an empty union-find data structure with <tt>node</tt> sites
+     * <tt>0</tt> through <tt>node-1</tt>. Each site is initially in its own
      * component.
      *
      * @param n the number of sites
-     * @throws IllegalArgumentException if <tt>n &lt; 0</tt>
+     * @throws IllegalArgumentException if <tt>node &lt; 0</tt>
      */
     public UnionFind(int n) {
         if (n < 0) throw new IllegalArgumentException();
@@ -48,7 +48,7 @@ public class UnionFind {
     /**
      * Returns the number of components.
      *
-     * @return the number of components (between <tt>1</tt> and <tt>n</tt>)
+     * @return the number of components (between <tt>1</tt> and <tt>node</tt>)
      */
     public int count() {
         return count;
@@ -62,7 +62,7 @@ public class UnionFind {
      * @return <tt>true</tt> if the two sites <tt>p</tt> and <tt>q</tt> are in the same component;
      * <tt>false</tt> otherwise
      * @throws IndexOutOfBoundsException unless
-     *                                   both <tt>0 &le; p &lt; n</tt> and <tt>0 &le; q &lt; n</tt>
+     *                                   both <tt>0 &le; p &lt; node</tt> and <tt>0 &le; q &lt; node</tt>
      */
     public boolean connected(int p, int q) {
         return find(p) == find(q);
@@ -75,7 +75,7 @@ public class UnionFind {
      * @param p the integer representing one site
      * @param q the integer representing the other site
      * @throws IndexOutOfBoundsException unless
-     *                                   both <tt>0 &le; p &lt; n</tt> and <tt>0 &le; q &lt; n</tt>
+     *                                   both <tt>0 &le; p &lt; node</tt> and <tt>0 &le; q &lt; node</tt>
      */
     public void union(int p, int q) {
         int rootP = find(p);
@@ -101,15 +101,15 @@ public class UnionFind {
     }
 
     /**
-     * Reads in a an integer <tt>n</tt> and a sequence of pairs of integers
-     * (between <tt>0</tt> and <tt>n-1</tt>) from standard input, where each integer
+     * Reads in a an integer <tt>node</tt> and a sequence of pairs of integers
+     * (between <tt>0</tt> and <tt>node-1</tt>) from standard input, where each integer
      * in the pair represents some site;
      * if the sites are in different components, merge the two components
      * and print the pair to standard output.
      *
     public static void main(String[] args) {
-        int n = StdIn.readInt();
-        UF uf = new UF(n);
+        int node = StdIn.readInt();
+        UF uf = new UF(node);
         while (!StdIn.isEmpty()) {
             int p = StdIn.readInt();
             int q = StdIn.readInt();
@@ -117,7 +117,7 @@ public class UnionFind {
             uf.union(p, q);
             StdOut.println(p + " " + q);
         }
-        StdOut.println(uf.n() + " components");
+        StdOut.println(uf.node() + " components");
     }
     */
 }

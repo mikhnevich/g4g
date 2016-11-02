@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Random;
 
 /*
+https://github.com/BlueRaja/Weighted-Item-Randomizer-for-C-Sharp/blob/master/Weighted%20Randomizer/DynamicWeightedRandomizer.cs
+http://www.eternallyconfuzzled.com/tuts/datastructures/jsw_tut_andersson.aspx
 
 */
 public class WeightedRandomizer {
